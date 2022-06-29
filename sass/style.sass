@@ -7,6 +7,7 @@ a
 @media (min-width: 1400px)
     .container
         max-width: 1400px
+        padding: 0
 @mixin header_margin-top 
     margin-top: 51px
 
@@ -61,10 +62,13 @@ a
             width: 35px
             border-radius: 50%
             background: #0655A0 url(../img/header/search.svg) center center no-repeat
+    &__social
+        display: flex
     &__location
         @include header_margin-top
         display: flex
         align-items: center
+        margin-right: 14px
         &-icon
             height: 34px
             width: 35px
@@ -79,7 +83,30 @@ a
             color: #000000
             a
                 display: block
+    &__time
+        @include header_margin-top
+        display: flex
+        align-items: center
+        margin-right: 14px
+        &-icon
+            height: 34px
+            width: 35px
+            border-radius: 50%
+            background: #F5F5F5 url(../img/header/time.svg) center center no-repeat
+        &-descr
+            span
+                display: block
+            font-weight: 600
+            font-size: 12px
+            line-height: 16px
 
+            color: #000000
+    &__phone
+        @include header_margin-top
+        height: 34px
+        width: 35px
+        border-radius: 50%
+        background: #F5F5F5 url(../img/header/phone.svg) center center no-repeat
 
 
 
