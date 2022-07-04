@@ -289,12 +289,12 @@ a
                     content: none
 
 .discounts, .popular
-    padding-top: 75px
+    padding-top: 45px
     h2
         font-weight: 700
         font-size: 28px
         color: #000000
-        margin-bottom: 30px
+        margin-bottom: 26px
     .nav
         width: 540px
         padding-left: 13px
@@ -332,14 +332,12 @@ a
 
             
     &-slider
-        height: 422px
         .slick
             &-list
                 height: 100%
                 margin-left: -10px
                 margin-right: -10px
             &-track
-                height: 100% 
                 display: flex   
                 align-items: stretch 
             &-arrow
@@ -358,12 +356,14 @@ a
                 transform: translateY(-50%) rotate(180deg)
                     
         .card
-            align-self: stretch
             margin: 0 10px
             border: 1px solid #DDDDDD 
             border-radius: 0
             padding: 25px 19px 16px 19px 
             position: relative
+            height: auto
+            display: flex
+            justify-content: space-between
             &__img  
                 height: 154px
             &__label
@@ -399,7 +399,7 @@ a
                 font-size: 12px
                 line-height: 16px
                 color: #B6B6B6
-                margin-bottom: 10px
+                margin-bottom: 12px
             &-title
                 font-weight: 400
                 font-size: 14px
@@ -423,7 +423,7 @@ a
                 font-weight: 600
                 font-size: 18px
                 color: #000000
-                margin-bottom: 9px
+                margin-bottom: 12px
                 span
                     font-weight: 400
                     font-size: 12px
@@ -449,6 +449,8 @@ a
 
 .popular
     padding: 51px 0 59px 0
+    h2
+        margin-bottom: 29px
     .nav
         width: 1120px
 .choise
@@ -475,7 +477,7 @@ a
         line-height: 27px
         color: #000000
 .cards
-    padding: 30px 0 60px 0
+    padding: 30px 0 64px 0
     &__item
         width: 400px
         height: 94px
@@ -485,23 +487,249 @@ a
         justify-content: center
         align-items: center
         margin-right: 53px
-        img
+        padding: 13px 32px 14px 34px
+        &:last-child
+            margin-right: 0
+        .img
             margin-right: 15px
     &__title
         font-weight: 700
         font-size: 16px
+        line-height: 14px
         color: #000000
     &__descr
         font-weight: 400
         font-size: 14px
+        line-height: 15px
         color: #000000
 
     .row
         justify-content: center
         
             
+.promo
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+    .wrap__text
+        margin-right: 74px
+    h1
+        font-weight: 700  
+        font-size: 30px
+        line-height: 35px
+        color: #000000
+        margin-bottom: 0
+    &__subtitle
+        font-weight: 700
+        font-size: 20px
+        color: #000000
+        margin-bottom: 27px
+    &__descr
+        font-weight: 400
+        font-size: 14px
+        line-height: 22px
+        word-spacing: 3px
+        color: #000000
+        padding-left: 5px
+        p
+            margin-bottom: 10px
+    .cards
+        padding-bottom: 48px
+        &__item
+            margin-top: 22px
+            margin-right: 110px
+            height: 89px
+            padding: 23px 32px 14px 52px
+            .img
+                margin-right: 25px
+            &:last-child
+                .img
+                    margin-right: 15px
 
+        &__title
+            font-weight: 600
+            margin-bottom: 4px
+.map
+    width: 100%
+    height: 321px
+    div
+        width: 100%
+        height: 100%
 
+.footer
+    background: #F1F8FF
+    padding: 24px 0 67px 0
+    .container
+        padding-left: 94px
+        display: flex
+    &__social
+        font-weight: 600
+        font-size: 14px
+        line-height: 19px
+        color: #000000
+        margin-right: 129px
+    &__logo
+        margin-bottom: 19px
+    &__time, &__phone
+        display: flex
+        align-items: flex-start
+        margin-bottom: 17px
+        width: 200px
+        &-descr
+            margin-top: -4px
+        &-icon
+            width: 31px
+            display: flex
+            justify-content: center
+            align-items: center
+    &__phone
+        &-icon
+            margin-right: 8px
+            width: 26px
+            display: flex
+            justify-content: center
+            align-items: center
+        margin-bottom: 18px
+    &__wrap
+        div
+            display: inline-block
+            width: 38px
+            height: 38px
+    &__vk
+        background: url(../img/footer/vk.svg) center center no-repeat, #0655A0
+        border-radius: 50%
+        margin-right: 9px
+    &__ok
+        background: url(../img/footer/ok.svg) center center no-repeat, #0655A0
+        border-radius: 50%
+    &-title
+        font-weight: 700
+        font-size: 14px
+        line-height: 18px
+        color: #000000
+        margin-bottom: 14px
+    &__col
+        padding-top: 21px
+        // margin-right: 126px
+        &:nth-child(2)
+            margin-right: 96px
+        &:nth-child(3)
+            margin-right: 100px
+        &:nth-child(4)
+            margin-right: 100px
+            .footer__col_list
+                margin-bottom: 21px
+        &_list
+            list-style: none
+            padding: 0
+        &_link
+            font-weight: 400
+            font-size: 13px
+            line-height: 23px
+            color: #000000
+            margin-bottom: 4px    
+            display: block
+    &__mailing
+        padding-top: 21px
+        .footer-title
+            margin-bottom: 17px
+        .input-email
+            padding-left: 17px
+            display: block
+            width: 417px
+            height: 48px
+            background: #FFFFFF
+            border: 1px solid #EAEAEA
+            border-radius: 4px
+            font-weight: 300
+            font-size: 14px
+            line-height: 20px
+            color: #A5A5A5
+            margin-bottom: 16px
+        .input-check_wrap
+            display: flex
+            align-items: flex-end
+            margin-bottom: 22px
+        .input-check
+            margin-right: 14px
+            width: 16px
+            height: 16px
+            background: #FBFBFB
+            border: 1px solid #EAEAEA
+            border-radius: 3px
+        .check-text
+            font-family: 'Exo 2'
+            font-style: normal
+            font-weight: 400
+            font-size: 12px
+            line-height: 14px
+            letter-spacing: 0.2px
+            color: #000000
+            span
+                text-decoration-line: underline
+                color: #000000
+
+        .footer_btn
+            width: 242px
+            height: 49px
+            display: block
+            background: #0655A0
+            border-radius: 4px
+            border: none
+            font-family: 'Poppins'
+            font-style: normal
+            font-weight: 600
+            font-size: 14px
+            line-height: 21px
+            color: #FFFFFF
+    .footer-webstripe
+        background: #272727
+        margin-top: 67px
+        padding-bottom: 19px
+        padding-top: 25px
+        .container
+            display: block
+        .wrap
+            display: flex
+            margin: 0 112px 0 27px
+            padding-bottom: 19px
+            justify-content: space-between
+            align-items: flex-end
+            border-bottom: 1px solid #BFBDBD
+        
+        .payment
+            display: flex
+            align-items: flex-end
+            &-text
+                display: inline-block
+                font-weight: 700
+                font-size: 14px
+                line-height: 19px
+                color: #FFFFFF
+                margin: 0
+                margin-right: 70px
+        img
+            &:nth-child(2)
+                margin-right: 27px
+            &:nth-child(3)
+                margin-right: 30px
+
+                
+        .privacy
+            font-weight: 400
+            font-size: 12px
+            line-height: 12px
+            text-decoration-line: underline
+            color: #FFFFFF
+            margin: 0
+            padding-bottom: 6px
+        .webstripe_logo
+            display: block
+            text-align: center
+            margin-top: 12px
+
+        
         
 
 

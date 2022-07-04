@@ -2,691 +2,924 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Стройся</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стройся</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Open+Sans:wght@300;400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__logo">
-                <img src="/img/logo.png" alt="logo">
-            </div>
-            <div class="header__wrap">
-                <form action="#" class="header__search">
-                    <input type="text" placeholder="Поиск">
-                    <div class="header__search-icon"></div>
-                </form>
+  <header class="header">
+    <div class="container">
+      <div class="header__logo">
+        <img src="/img/logo.png" alt="logo">
+      </div>
+      <div class="header__wrap">
+        <form action="#" class="header__search">
+          <input type="text" placeholder="Поиск">
+          <div class="header__search-icon"></div>
+        </form>
 
-                <div class="header__social">
-                    <div class="header__location">
-                        <div class="header__location-icon"></div>
-                        <div class="header__location-descr">
-                            <span><a href="#">Томск</a></span>
-                            <span><a href="#">Северск</a></span>    
-                        </div>
-                    </div>
-                    <div class="header__time">
-                        <div class="header__time-icon"></div>
-                        <div class="header__time-descr">
-                            <span><a href="#">Интернет-магазин</a></span>
-                            <span><a href="#">9:00 - 21:00</a></span>
-                        </div>
-    
-                    </div>
-                    <div class="header__phone">
-                        <div class="header__phone-icon"></div>
-                        <div class="header__phone-descr">
-                            <span><a href="tel:+79095435225">8-909-543-52-25</a></span>
-                            <span><a href="tel:+79095435225">Обратный звонок</a></span>
-                        </div>
-                    </div>
+        <div class="header__social">
+          <div class="header__location">
+            <div class="header__location-icon"></div>
+            <div class="header__location-descr">
+              <span><a href="#">Томск</a></span>
+              <span><a href="#">Северск</a></span>
+            </div>
+          </div>
+          <div class="header__time">
+            <div class="header__time-icon"></div>
+            <div class="header__time-descr">
+              <span><a href="#">Интернет-магазин</a></span>
+              <span><a href="#">9:00 - 21:00</a></span>
+            </div>
+
+          </div>
+          <div class="header__phone">
+            <div class="header__phone-icon"></div>
+            <div class="header__phone-descr">
+              <span><a href="tel:+79095435225">8-909-543-52-25</a></span>
+              <span><a href="tel:+79095435225">Обратный звонок</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+
+              <a class="nav-link nav-btn" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <div class="nav-burger">
+                  <span class="nav-burger-item"></span>
+                  <span class="nav-burger-item"></span>
+                  <span class="nav-burger-item"></span>
+
                 </div>
-            </div>
+                <div class="nav-cross">
+                </div>
+                <p>Каталог</p>
+
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Программа лояльности</a></li>
+                <li><a class="dropdown-item" href="#">Услуги и сервис</a></li>
+                <li><a class="dropdown-item" href="#">Советы по ремонту</a></li>
+                <li><a class="dropdown-item" href="#">Обмен и возврат</a></li>
+                <li><a class="dropdown-item" href="#">Вопрос ответ</a></li>
+                <li><a class="dropdown-item" href="#">Как оформить заказ</a></li>
+                <li><a class="dropdown-item" href="#">Как оплатить заказ</a></li>
+                <li><a class="dropdown-item" href="#">Подарочные карты</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Акции</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Покупателям
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Программа лояльности</a></li>
+                <li><a class="dropdown-item" href="#">Услуги и сервис</a></li>
+                <li><a class="dropdown-item" href="#">Советы по ремонту</a></li>
+                <li><a class="dropdown-item" href="#">Обмен и возврат</a></li>
+                <li><a class="dropdown-item" href="#">Вопрос ответ</a></li>
+                <li><a class="dropdown-item" href="#">Как оформить заказ</a></li>
+                <li><a class="dropdown-item" href="#">Как оплатить заказ</a></li>
+                <li><a class="dropdown-item" href="#">Подарочные карты</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Поставщикам
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Анкета поставщика</a></li>
+                <li><a class="dropdown-item" href="#">Размещение рекламы в ТЦ «Стройся»</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Оптовикам
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Условия сотрудничества</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                О компании
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Новости</a></li>
+                <li><a class="dropdown-item" href="#">Контакты</a></li>
+                <li><a class="dropdown-item" href="#">История компании</a></li>
+                <li><a class="dropdown-item" href="#">Вакансии</a></li>
+                <li><a class="dropdown-item" href="#">Собственная торговая марка “Колибри”</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Услуги
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Доставка</a></li>
+                <li><a class="dropdown-item" href="#">Услуги грузчиков</a></li>
+                <li><a class="dropdown-item" href="#">Оверлок</a></li>
+                <li><a class="dropdown-item" href="#">Ремонт и отделка под ключ</a></li>
+                <li><a class="dropdown-item" href="#">Монтаж теплиц</a></li>
+                <li><a class="dropdown-item" href="#">Установка сантехники</a></li>
+                <li><a class="dropdown-item" href="#">Дизайн</a></li>
+                <li><a class="dropdown-item" href="#">Установка дверей</a></li>
+                <li><a class="dropdown-item" href="#">Компьютерная колеровка</a></li>
+                <li><a class="dropdown-item" href="#">Установка кондиционера</a></li>
+                <li><a class="dropdown-item" href="#">Резка материалов</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-
-                        <a class="nav-link nav-btn" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <div class="nav-burger">
-                                <span class="nav-burger-item"></span>
-                                <span class="nav-burger-item"></span>
-                                <span class="nav-burger-item"></span>
-                                
-                            </div>
-                            <div class="nav-cross">     
-                            </div>
-                            <p>Каталог</p>
-                            
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Программа лояльности</a></li>
-                            <li><a class="dropdown-item" href="#">Услуги и сервис</a></li>
-                            <li><a class="dropdown-item" href="#">Советы по ремонту</a></li>
-                            <li><a class="dropdown-item" href="#">Обмен и возврат</a></li>
-                            <li><a class="dropdown-item" href="#">Вопрос ответ</a></li>
-                            <li><a class="dropdown-item" href="#">Как оформить заказ</a></li>
-                            <li><a class="dropdown-item" href="#">Как оплатить заказ</a></li>
-                            <li><a class="dropdown-item" href="#">Подарочные карты</a></li>
-                        </ul>
-                    </li>
-                    
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Акции</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Покупателям
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Программа лояльности</a></li>
-                      <li><a class="dropdown-item" href="#">Услуги и сервис</a></li>
-                      <li><a class="dropdown-item" href="#">Советы по ремонту</a></li>
-                      <li><a class="dropdown-item" href="#">Обмен и возврат</a></li>
-                      <li><a class="dropdown-item" href="#">Вопрос ответ</a></li>
-                      <li><a class="dropdown-item" href="#">Как оформить заказ</a></li>
-                      <li><a class="dropdown-item" href="#">Как оплатить заказ</a></li>
-                      <li><a class="dropdown-item" href="#">Подарочные карты</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Поставщикам
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Анкета поставщика</a></li>
-                      <li><a class="dropdown-item" href="#">Размещение рекламы в ТЦ «Стройся»</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Оптовикам
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Условия сотрудничества</a></li>
-                    </ul>
-                  </li>
-
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        О компании
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Новости</a></li>
-                      <li><a class="dropdown-item" href="#">Контакты</a></li>
-                      <li><a class="dropdown-item" href="#">История компании</a></li>
-                      <li><a class="dropdown-item" href="#">Вакансии</a></li>
-                      <li><a class="dropdown-item" href="#">Собственная торговая марка “Колибри”</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Услуги
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">Доставка</a></li>
-                      <li><a class="dropdown-item" href="#">Услуги грузчиков</a></li>
-                      <li><a class="dropdown-item" href="#">Оверлок</a></li>
-                      <li><a class="dropdown-item" href="#">Ремонт и отделка под ключ</a></li>
-                      <li><a class="dropdown-item" href="#">Монтаж теплиц</a></li>
-                      <li><a class="dropdown-item" href="#">Установка сантехники</a></li>
-                      <li><a class="dropdown-item" href="#">Дизайн</a></li>
-                      <li><a class="dropdown-item" href="#">Установка дверей</a></li>
-                      <li><a class="dropdown-item" href="#">Компьютерная колеровка</a></li>
-                      <li><a class="dropdown-item" href="#">Установка кондиционера</a></li>
-                      <li><a class="dropdown-item" href="#">Резка материалов</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="navbar-icons">
-                <a href="#">
-                  <div class="navbar-icons_item">
-                    <img src="./img/header/balance.svg" alt="compasion">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="navbar-icons_item">
-                    <img src="./img/header/heart.svg" alt="like">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="navbar-icons_item">
-                    <img src="./img/header/trolley.svg" alt="basket">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="navbar-icons__profile">
-                    <img src="./img/header/profile.png" alt="profile">
-                    <div class="descr">
-                      Профиль
-                    </div>
-                  </div>
-                </a>
-
-
-                
-                
-
-             
+        <div class="navbar-icons">
+          <a href="#">
+            <div class="navbar-icons_item">
+              <img src="./img/header/balance.svg" alt="compasion">
+            </div>
+          </a>
+          <a href="">
+            <div class="navbar-icons_item">
+              <img src="./img/header/heart.svg" alt="like">
+            </div>
+          </a>
+          <a href="">
+            <div class="navbar-icons_item">
+              <img src="./img/header/trolley.svg" alt="basket">
+            </div>
+          </a>
+          <a href="">
+            <div class="navbar-icons__profile">
+              <img src="./img/header/profile.png" alt="profile">
+              <div class="descr">
+                Профиль
               </div>
             </div>
+          </a>
 
 
-          </nav>
-    </header>
-    <section class="main-slider">
-      <div class="container">
-        <div class="slider">
-          <div class="slider_item">
-            <img src="./img/main-slider/slider_1.jpg" alt="slider">
-          </div>
-          <div class="slider_item">
-            <img src="./img/main-slider/slider_1.jpg" alt="slider">
-          </div>
-          <div class="slider_item">
-            <img src="./img/main-slider/slider_1.jpg" alt="slider">
-          </div>
-          <div class="slider_item">
-            <img src="./img/main-slider/slider_1.jpg" alt="slider">
-          </div>
-          <div class="slider_item">
-            <img src="./img/main-slider/slider_1.jpg" alt="slider">
-          </div>
-          <div class="slider_item">
-            <img src="./img/main-slider/slider_1.jpg" alt="slider">
-          </div>
-          <div class="slider_item">
-            <img src="./img/main-slider/slider_1.jpg" alt="slider">
-          </div>
-      </div>
+
+
+
+
+        </div>
       </div>
 
-    </section>
 
-    <section class="discounts">
-      <div class="container">
-        <h2>Теперь дешевле</h2>
-        <nav class="nav">
-          <a class="nav-link active" aria-current="page" href="#">Рубим цены</a>
-          <a class="nav-link" href="#">Шок цены</a>
-          <a class="nav-link active" href="#">Распродажа</a>
-          <a class="nav-link view-all" href="#">Смотреть все</a>
-          
-        </nav>
-        <div class="discounts-slider">
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_1.png" class="card-img-top" alt="slide">
-            </div>
-            <div class="card__label card__axe"></div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Сетка кладочная (d4) 0,51*1,5 (50*50)</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
+    </nav>
+  </header>
+  <section class="main-slider">
+    <div class="container">
+      <div class="slider">
+        <div class="slider_item">
+          <img src="./img/main-slider/slider_1.jpg" alt="slider">
+        </div>
+        <div class="slider_item">
+          <img src="./img/main-slider/slider_1.jpg" alt="slider">
+        </div>
+        <div class="slider_item">
+          <img src="./img/main-slider/slider_1.jpg" alt="slider">
+        </div>
+        <div class="slider_item">
+          <img src="./img/main-slider/slider_1.jpg" alt="slider">
+        </div>
+        <div class="slider_item">
+          <img src="./img/main-slider/slider_1.jpg" alt="slider">
+        </div>
+        <div class="slider_item">
+          <img src="./img/main-slider/slider_1.jpg" alt="slider">
+        </div>
+        <div class="slider_item">
+          <img src="./img/main-slider/slider_1.jpg" alt="slider">
+        </div>
+      </div>
+    </div>
 
-            </div>
+  </section>
+
+  <section class="discounts">
+    <div class="container">
+      <h2>Теперь дешевле</h2>
+      <nav class="nav">
+        <a class="nav-link active" aria-current="page" href="#">Рубим цены</a>
+        <a class="nav-link" href="#">Шок цены</a>
+        <a class="nav-link active" href="#">Распродажа</a>
+        <a class="nav-link view-all" href="#">Смотреть все</a>
+
+      </nav>
+      <div class="discounts-slider">
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_1.png" class="card-img-top" alt="slide">
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          <div class="card__label card__axe"></div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Сетка кладочная (d4) 0,51*1,5 (50*50)</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
             </div>
-            <div class="card__label card__axe"></div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Люстра Artelamp A5004AP-1WG 1х40W1хE14</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
 
-            </div>
+
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_3.png" class="card-img-top" alt="slide">
-            </div>
-            <div class="card__label card__axe"></div>
-            <img class="card__heart" src="./img/discounts/heart-disable.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
-
-            </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_4.png" class="card-img-top" alt="slide">
+          <div class="card__label card__axe"></div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Люстра Artelamp A5004AP-1WG 1х40W1хE14</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
             </div>
-            <div class="card__label card__axe"></div>
-            <img class="card__heart" src="./img/discounts/heart-disable.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Светильник ЭРА ST3 CH MR16 12V 50W хром штампованный, точечный, декорат. (43804)</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
 
-            </div>
+
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_5.png" class="card-img-top" alt="slide">
-            </div>
-            <div class="card__label card__axe"></div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
-
-            </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_3.png" class="card-img-top" alt="slide">
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          <div class="card__label card__axe"></div>
+          <img class="card__heart" src="./img/discounts/heart-disable.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
             </div>
-            <div class="card__label card__axe"></div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
 
-            </div>
+
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
-            </div>
-            <div class="card__label card__axe"></div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
-
-            </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_4.png" class="card-img-top" alt="slide">
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          <div class="card__label card__axe"></div>
+          <img class="card__heart" src="./img/discounts/heart-disable.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Светильник ЭРА ST3 CH MR16 12V 50W хром штампованный, точечный, декорат. (43804)
+              </h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
             </div>
-            <div class="card__label card__axe"></div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
 
+
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_5.png" class="card-img-top" alt="slide">
+          </div>
+          <div class="card__label card__axe"></div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
             </div>
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          </div>
+          <div class="card__label card__axe"></div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
+            </div>
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          </div>
+          <div class="card__label card__axe"></div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
+            </div>
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          </div>
+          <div class="card__label card__axe"></div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
+            </div>
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
+
+
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="popular">
-      <div class="container">
-        <h2>Популярные товары</h2>
-        <nav class="nav">
-          <a class="nav-link active" aria-current="page" href="#">Стройматериалы</a>
-          <a class="nav-link" href="#">Инструменты</a>
-          <a class="nav-link" href="#">Интерьер и отделка</a>
-          <a class="nav-link" href="#">Сантехника</a>
-          <a class="nav-link" href="#">Новинки</a>
-          <a class="nav-link" href="#">Товары со скидкой</a>
-          <a class="nav-link view-all" href="#">Смотреть все</a>
-          
-        </nav>
-        <div class="discounts-slider">
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_1.png" class="card-img-top" alt="slide">
-            </div>
-            <div class="card__label card__percent"></div>
-            <img class="card__heart" src="./img/discounts/heart-disable.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Сетка кладочная (d4) 0,51*1,5 (50*50)</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
+  <section class="popular">
+    <div class="container">
+      <h2>Популярные товары</h2>
+      <nav class="nav">
+        <a class="nav-link active" aria-current="page" href="#">Стройматериалы</a>
+        <a class="nav-link" href="#">Инструменты</a>
+        <a class="nav-link" href="#">Интерьер и отделка</a>
+        <a class="nav-link" href="#">Сантехника</a>
+        <a class="nav-link" href="#">Новинки</a>
+        <a class="nav-link" href="#">Товары со скидкой</a>
+        <a class="nav-link view-all" href="#">Смотреть все</a>
 
-            </div>
+      </nav>
+      <div class="discounts-slider">
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_1.png" class="card-img-top" alt="slide">
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          <div class="card__label card__percent"></div>
+          <img class="card__heart" src="./img/discounts/heart-disable.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Сетка кладочная (d4) 0,51*1,5 (50*50)</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
             </div>
-            <div class="card__label"></div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Люстра Artelamp A5004AP-1WG 1х40W1хE14</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
 
-            </div>
+
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_3.png" class="card-img-top" alt="slide">
-            </div>
-            <div class="card__label card__percent"></div>
-            <img class="card__heart" src="./img/discounts/heart-disable.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
-
-            </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_4.png" class="card-img-top" alt="slide">
+          <div class="card__label"></div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Люстра Artelamp A5004AP-1WG 1х40W1хE14</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
             </div>
-            <div class="card__label"></div>
-            <img class="card__heart" src="./img/discounts/heart-disable.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Светильник ЭРА ST3 CH MR16 12V 50W хром штампованный, точечный, декорат. (43804)</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
 
-            </div>
+
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_5.png" class="card-img-top" alt="slide">
-            </div>
-            <div class="card__label card__like"></div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
-
-            </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_3.png" class="card-img-top" alt="slide">
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          <div class="card__label card__percent"></div>
+          <img class="card__heart" src="./img/discounts/heart-disable.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
             </div>
-            <div class="card__label"></div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
 
-            </div>
+
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
-            </div>
-            <div class="card__label card__trolley"></div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
-
-            </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_4.png" class="card-img-top" alt="slide">
           </div>
-          <div class="card">
-            <div class="card__img">
-              <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          <div class="card__label"></div>
+          <img class="card__heart" src="./img/discounts/heart-disable.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Светильник ЭРА ST3 CH MR16 12V 50W хром штампованный, точечный, декорат. (43804)
+              </h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
             </div>
-            <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
-            <div class="card-body">
-              <div class="wrap">
-                <p class="card__product-code">Код товара: 10730062</p>
-                <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
-                <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
-              </div>
-              <div class="wrap">
-                <p class="card__old-price">342руб</p>
-                <p class="card__new-price">204.25 руб.<span> за шт</span></p>
-                <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
-                <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В корзину</span>  </a>
-              </div>
-              
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
 
+
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_5.png" class="card-img-top" alt="slide">
+          </div>
+          <div class="card__label card__like"></div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
             </div>
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          </div>
+          <div class="card__label"></div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
+            </div>
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          </div>
+          <div class="card__label card__trolley"></div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title">Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
+            </div>
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="./img/discounts/slider/slide_2.png" class="card-img-top" alt="slide">
+          </div>
+          <img class="card__heart" src="./img/discounts/heart-active.svg" alt="">
+          <div class="card-body">
+            <div class="wrap">
+              <p class="card__product-code">Код товара: 10730062</p>
+              <h5 class="card-title"> Переход гнездо F-штекер TV угловой (03-153) Cabletech (05-1311-4) 28509</h5>
+              <div class="card__raiting"><img src="./img/discounts/Rating.png" alt=""></div>
+            </div>
+            <div class="wrap">
+              <p class="card__old-price">342руб</p>
+              <p class="card__new-price">204.25 руб.<span> за шт</span></p>
+              <a href="#" class="btn card__btn-balance"><img src="./img/discounts/balance.svg" alt=""></a>
+              <a href="#" class="btn card__btn-trolley"><img src="./img/discounts/trolley.svg" alt=""> <span>В
+                  корзину</span> </a>
+            </div>
+
+
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="choise">
-      <button class="choise__btn">Широкий выбор</button>
-      <p>ТОВАРОВ ДЛЯ РЕМОНТА, ДОМА И САДА</p>
-    </section>
+  <section class="choise">
+    <button class="choise__btn">Широкий выбор</button>
+    <p>ТОВАРОВ ДЛЯ РЕМОНТА, ДОМА И САДА</p>
+  </section>
 
-    <section class="cards">
-      <div class="container">
-        <div class="row">
-          <div class="cards__item">
-            <div class="img">
-              <img src="./img/cards/club.png" alt="club_card">
-            </div>
-            <div class="wrap">
-              <div class="cards__title">
-                Карта «Клуб Новоселов»
-              </div>
-              <div class="cards__descr">
-                Получить бесплатно дисконтную карту можно в течение 5 лет с момента приобретения жиль
-              </div>
-            </div>
-  
+  <section class="cards">
+    <div class="container">
+      <div class="row">
+        <div class="cards__item">
+          <div class="img">
+            <img src="./img/cards/club.png" alt="club_card">
           </div>
-          <div class="cards__item">
-            <div class="img">
-              <img src="./img/cards/profi.png" alt="card_profi">
+          <div class="wrap">
+            <div class="cards__title">
+              Карта «Клуб Новоселов»
             </div>
-            <div class="wrap">
-              <div class="cards__title">
-                Карта "Профи" 
-              </div>
-              <div class="cards__descr">
-                Только для профессиональных строителей, отделочников и мастеров по ремонту. 
-              </div>
+            <div class="cards__descr">
+              Получить бесплатно дисконтную карту можно в течение 5 лет с момента приобретения жиль
             </div>
-  
           </div>
-          <div class="cards__item">
-            <div class="img"><img src="./img/cards/build.png" alt="card_build"></div>
-            <div class="wrap">
-              <div class="cards__title">
-                Карта «Стройся»
-              </div>
-              <div class="cards__descr">
-                Действует во всей розничной сети супермаркетов «Стройся», на сайте, а также в оптовых центра «Стройся».
-              </div>
-            </div>
-  
+
+        </div>
+        <div class="cards__item">
+          <div class="img">
+            <img src="./img/cards/profi.png" alt="card_profi">
           </div>
-        </div
+          <div class="wrap">
+            <div class="cards__title">
+              Карта "Профи"
+            </div>
+            <div class="cards__descr">
+              Только для профессиональных строителей, отделочников и мастеров по ремонту.
+            </div>
+          </div>
+
+        </div>
+        <div class="cards__item">
+          <div class="img"><img src="./img/cards/build.png" alt="card_build"></div>
+          <div class="wrap">
+            <div class="cards__title">
+              Карта «Стройся»
+            </div>
+            <div class="cards__descr">
+              действует во всей розничной сети супермаркетов «Стройся», на сайте, а также в оптовых центра «Стройся».
+            </div>
+          </div>
+
+        </div>
+  </section>
+
+  <section class="promo">
+    <div class="container">
+      <div class="wrap__text">
+        <h1>Интернет-магазин "Стройся"</h1>
+        <p class="promo__subtitle">Строительных и отделочных материалов</p>
+        <div class="promo__descr">
+          <p>
+            Компания Стройся (ряд независимых организаций (компаний)), работающих под одним брендом, уже более 29 лет
+            присутствует на рынке, предоставляя качественные материалы оптовым
+            <br>
+            и частным клиентам по всему региону. На сегодняшний день компании являются одними из самых крупных поставщиков
+            стройматериалов в Томской области. Однако, компании всегда смотрит в будущее, расширяют территорию продаж, активно
+            доставляя товары от проверенных производителей покупателям по всей России. 
+          </p>
+          <p>
+            
+          </p>
+          <p>
+            В компаниях вы можете приобрести широкий ассортимент продукции. Компании непрерывно развиваются и работают для
+            того, чтобы вы могли покупать стройматериалы по самым разнообразным и выгодным ценам.
+          </p>
+          <p>
+            Компании работают с крупными отечественными и зарубежными производителями. Компании ценят доверие покупателей,
+            поэтому все поставляемые товары проверяются на качество.
+          </p>
+          <p>
+            Среди товаров "Стройся" проверенная временем, а также высокотехнологичная продукция, ассортимент которой постоянно
+            расширяется.
+            Предлагаем вам ознакомиться с каталогом и подобрать качественные материалы для своего строительства или
+            производства.
+          </p>
+        </div>
+
       </div>
-    </section>
-
-    section.
-
-    <script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script>
-    <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="./js/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+      <div class="wrap__cards">
+        <div class="cards__item">
+          <div class="img">
+            <img src="./img/promo/card_1.svg" alt="club_card">
+          </div>
+          <div class="wrap">
+            <div class="cards__title">
+              Только лучшее качество
+            </div>
+            <div class="cards__descr">
+              Все поставляемые товары проверяются на качество
+            </div>
+          </div>
   
-    <script type="text/javascript">
-      $(document).ready(function(){
-        $('.slider').slick({
-            adaptiveHeight:true, 
-            dots:true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            arrows: false,
-            }   
-        );
-        $('.discounts-slider').slick({ 
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 10000000,
-            }   
-        );
-      });
-    </script>
-
-
+        </div>
+        <div class="cards__item">
+          <div class="img">
+            <img src="./img/promo/card_2.svg" alt="card_profi">
+          </div>
+          <div class="wrap">
+            <div class="cards__title">
+              Большой ассортимент
+            </div>
+            <div class="cards__descr">
+              строительных материалов всегда в наличии
+            </div>
+          </div>
   
+        </div>
+        <div class="cards__item">
+          <div class="img"><img src="./img/promo/card_3.svg" alt="card_build"></div>
+          <div class="wrap">
+            <div class="cards__title">
+              Доставка стройматериалов
+            </div>
+            <div class="cards__descr">
+              Доставка стройматериалов по адресу или  пункт выдачи заказов
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  <section class="map">
+    <p>Москва</p>
+    <div id="ymaps-msc"></div>
+  </section>
+  
+  <footer class="footer">
+    <div class="container">
+        <div class="footer__social">
+          <div class="footer__logo">
+            <img src="/img/footer/logo.png" alt="logo">
+          </div>
+          <div class="footer__time">
+            <div class="footer__time-icon">
+              <img src="./img/footer/time.svg" alt="time">
+            </div>
+            <div class="footer__time-descr">
+              Время работы
+              <br>
+              интернет магазина:
+              <br>
+              9:00 - 21:00
+            </div>
+  
+          </div>
+          <div class="footer__phone">
+            <div class="footer__phone-icon">
+              <img src="./img/footer/phone.svg" alt="phone">
+            </div>
+            <div class="footer__phone-descr">
+              <a href="tel:+79095435225">8-909-543-52-25</a>
+            </div>
+          </div>
+          <div class="footer__wrap">
+            <div class="footer__vk"></div>
+            <div class="footer__ok"></div>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer-title">
+            О компании
+          </div>
+          <ul class="footer__col_list">
+            <li><a class="footer__col_link" href="#">Новости</a></li>
+            <li><a class="footer__col_link" href="#">Контакты</a></li>
+            <li><a class="footer__col_link" href="#">История компании</a></li>
+            <li><a class="footer__col_link" href="#">Вакансии</a></li>
+            <li><a class="footer__col_link" href="#">Собственная <br>торговая марка <br>“Колибри”</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <div class="footer-title">
+            Покупателям
+          </div>
+          <ul class="footer__col_list">
+            <li><a class="footer__col_link" href="#">Программа лояльности</a></li>
+            <li><a class="footer__col_link" href="#">Услуги и сервис</a></li>
+            <li><a class="footer__col_link" href="#">Советы по ремонту</a></li>
+            <li><a class="footer__col_link" href="#">Обмен и возврат</a></li>
+            <li><a class="footer__col_link" href="#">Вопрос ответ</a></li>
+            <li><a class="footer__col_link" href="#">Как оформить заказ</a></li>
+            <li><a class="footer__col_link" href="#">Как оплатить заказ</a></li>
+            <li><a class="footer__col_link" href="#">Подарочные карты</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__col">
+          <div class="footer-title">
+            Поставщикам
+          </div>
+          <ul class="footer__col_list">
+            <li><a class="footer__col_link" href="#">Анкета поставщика</a></li>
+            <li><a class="footer__col_link" href="#">Размещение рекламы <br>в ТЦ «Стройся»</a></li>
+          </ul>
+          <div class="footer-title">
+            Оптовикам
+          </div>
+          <ul class="footer__col_list">
+            <li><a class="footer__col_link" href="#">Условия сотрудничества</a></li>
+          </ul>
+        </div>
+        <form action="#" class="footer__mailing">
+          <div class="footer-title">
+            Подпишитесь на рассылку
+            <br> 
+            и будьте  вкурсе всех скидок и акций!
+          </div>
+          <input class="input-email" type="mail" class="footer__input" value="E-mail*">
+          <div class="input-check_wrap">
+            <input class="input-check" id="footerCheck" type="checkbox">
+            <label class="check-text" for="footerCheck">Я подтверждаю свое согласие с <span>Политикой конфиденциальности</span></label>
+          </div>
+         
+          <button class="footer_btn">Подписаться</button>
+        </form>
+    </div>
+
+
+    </div>
+    <div class="footer-webstripe">
+      <div class="container">
+        <div class="wrap">
+          <div class="payment">
+            <p class="payment-text">
+              Способы оплаты
+            </p>
+              
+      
+            <img src="./img/footer/visa.png" alt="visa">
+            <img src="./img/footer/mastercard.png" alt="mastercard">
+            <img src="./img/footer/ya.png" alt="yandex">
+          </div>
+
+          <p class="privacy">
+            Политика конфиденциальности
+          </p>
+        </div>
+       
+        
+
+      </div>
+      <a href="#" class="webstripe_logo"><img src="./img/footer/webstripe_logo.png" alt="webstripe"></a>
+        
+    </div>
+      
+
+      
+
+  </footer>
+
+  <script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+  <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('.slider').slick({
+        adaptiveHeight: true,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        arrows: false,
+      }
+      );
+      $('.discounts-slider').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 10000000,
+      }
+      );
+      let mapMsc = new YMaps.Map(YMaps.jQuery("#ymaps-msc")[0]);
+      mapMsc.setCenter(new YMaps.GeoPoint(84.97018707250969,56.48938963435449), 13);
+      // mapMsc.setCenter(new YMaps.GeoPoint(37.609,55.753), 5);
+    });
+
+  </script>
+  <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+
+
+
 
 </body>
 
