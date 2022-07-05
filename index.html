@@ -758,9 +758,9 @@
     </div>
   </section>
   <section class="map">
-    <p>Москва</p>
-    <div id="ymaps-msc"></div>
+    <div id="ymaps-tomsk"></div>
   </section>
+  <!-- <div id="map" style="width: 600px; height: 400px"></div> -->
   
   <footer class="footer">
     <div class="container">
@@ -890,34 +890,8 @@
   <script type="text/javascript" src="./js/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="./js/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function () {
-      $('.slider').slick({
-        adaptiveHeight: true,
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        arrows: false,
-      }
-      );
-      $('.discounts-slider').slick({
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 10000000,
-      }
-      );
-      let mapMsc = new YMaps.Map(YMaps.jQuery("#ymaps-msc")[0]);
-      mapMsc.setCenter(new YMaps.GeoPoint(84.97018707250969,56.48938963435449), 13);
-      // mapMsc.setCenter(new YMaps.GeoPoint(37.609,55.753), 5);
-    });
-
-  </script>
-  <script src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
-
+  <script src="https://api-maps.yandex.ru/2.1?apikey=15cb7180-6519-4991-afd0-a8512efc8f5b&lang=ru_RU>"></script>
+  <script src="./js/script.js"></script>
 
 
 

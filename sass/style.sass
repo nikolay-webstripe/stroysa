@@ -1,5 +1,102 @@
+@font-face 
+  font-family: 'icons';
+  src:  url('fonts/icons.eot?c74v0x');
+  src:  url('fonts/icons.eot') format('embedded-opentype'),url('fonts/icons.ttf') format('truetype'),url('fonts/icons.woff') format('woff'),url('fonts/icons.svg') format('svg')
+  font-weight: normal
+  font-style: normal
+  font-display: block
+
+
+.icon 
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important
+  speak: never
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+
+.icon-balance-black:before 
+  content: "\e900"
+
+.icon-balance-white:before 
+  content: "\e901"
+  color: #fff
+
+.icon-heart-empty-black:before 
+  content: "\e902"
+
+.icon-heart-empty-white:before 
+  content: "\e903"
+  color: #fff
+
+.icon-heart-red:before 
+  content: "\e904"
+  color: #f22
+
+.icon-location-black:before 
+  content: "\e905"
+
+.icon-ok:before 
+  content: "\e906"
+  color: #fff
+
+.icon-phone-black:before 
+  content: "\e907"
+
+.icon-phone-blue:before 
+  content: "\e908"
+
+.icon-profile .path1:before 
+  content: "\e909"
+  color: rgb(255, 255, 255)
+
+.icon-profile .path2:before 
+  content: "\e90a"
+  margin-left: -0.9658203125em
+  color: rgb(6, 85, 160)
+
+.icon-search-white:before 
+  content: "\e90b"
+  color: #fff
+
+.icon-time-black:before 
+  content: "\e90c"
+
+.icon-time-blue:before 
+  content: "\e90d"
+  color: #0655a0
+
+.icon-trolley-white:before 
+  content: "\e90e"
+  color: #fff
+
+.icon-vk:before 
+  content: "\e90f"
+  color: #fff
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $navbar-light-color: #FFFF
+$color-hover: #063562
 
 *
     font-family: "Open Sans", Roboto, sans-serif
@@ -17,6 +114,10 @@ a
 //   xl: 1140px,
 //   xxl: 1636px
 // )
+    
+    
+
+        
 
 .header
     min-height: 114px
@@ -31,7 +132,7 @@ a
         flex-direction: column
         margin: 17px 0 11px 14px
     &__wrap
-        margin: 41px 0 26px
+        margin-top: 41px
         display: flex
         align-items: center
     &__search
@@ -133,14 +234,12 @@ a
                 position: absolute
                 top: 15px
                 right: -8px
-                    
+        
 
         &-burger
             display: flex
             flex-direction: column
             justify-content: center
-            &:hover
-                display: none
 
                     
             
@@ -168,8 +267,7 @@ a
             width: 16px
             height: 16px
             background: url(../img/header/cross.png) center center no-repeat
-            &:hover
-                display: block
+
 
 
 
@@ -180,6 +278,11 @@ a
             height: 43px
             background: #FFFFFF
             border-radius: 4px
+            &:hover
+                .nav-burger
+                    display: none
+                .nav-cross
+                    display: block
             
             p
                 font-weight: 500
@@ -189,8 +292,12 @@ a
                 color: #0655A0
             &::after
                 display: none
+        
     .nav-item
+        position: relative
         margin-right: 10px
+        
+
         &:first-child
             margin-right: 43px
         .nav-link
@@ -212,6 +319,31 @@ a
             position: absolute
             top: 14px
             right: -8px
+        &-menu
+            position: relative
+            background: #FFFFFF
+            border-radius: 0
+            border: none
+            padding: 13px 14px 17px 17px
+            font-weight: 400
+            font-size: 13px
+            line-height: 27px
+            color: #000000
+            &::after
+                content: ''
+                display: block
+                width: 0
+                height: 0
+                border-style: solid;
+                border-width: 18px 15px 18px 15px
+                border-color: transparent transparent #fff transparent
+                position: absolute
+                left: 12px
+                top: -29px
+
+            a
+                padding: 0
+                padding-bottom: 4px
         
 
 .navbar
@@ -239,7 +371,9 @@ a
                 width: 16px
                 height: 16px
                 border-radius: 50%
-                text-align: center
+                display: flex
+                align-items: center
+                justify-content: center
                 
 
         &__profile
@@ -261,6 +395,7 @@ a
         img
             border-radius: 4px
     ul
+        width: 20%
         bottom: 20px
         left: 69px
         display: flex
@@ -269,13 +404,15 @@ a
             display: block
             height: 9px
             width: 9px
+            margin-left: 0
             margin-right: 2px
             button
                 transition: 0.5s all
-                width: 5px
-                height: 5px
+                width: 7px
+                height: 7px
                 border-radius: 50%
                 background: rgba(6, 85, 160, 0.64)
+                padding: 0
                 &::before
                     content: none
         .slick-active
@@ -289,6 +426,8 @@ a
                     content: none
 
 .discounts, .popular
+    padding-left: 50px
+    padding-right: 50px
     padding-top: 45px
     h2
         font-weight: 700
@@ -444,11 +583,14 @@ a
                 font-size: 14px
                 line-height: 19px
                 color: #FFFFFF
+                &:hover
+                    background: $color-hover
                 img
                     display: inline
 
 .popular
-    padding: 51px 0 59px 0
+    padding-top: 51px
+    padding-bottom: 59px
     h2
         margin-bottom: 29px
     .nav
@@ -551,6 +693,8 @@ a
             font-weight: 600
             margin-bottom: 4px
 .map
+    // padding: 46px 0 44px 0
+    margin: 46px 0 44px 0
     width: 100%
     height: 321px
     div
@@ -559,7 +703,7 @@ a
 
 .footer
     background: #F1F8FF
-    padding: 24px 0 67px 0
+    padding-top: 24px
     .container
         padding-left: 94px
         display: flex
@@ -667,6 +811,12 @@ a
             letter-spacing: 0.2px
             color: #000000
             span
+                font-family: 'Exo 2'
+                font-style: normal
+                font-weight: 400
+                font-size: 12px
+                line-height: 14px
+                letter-spacing: 0.2px
                 text-decoration-line: underline
                 color: #000000
 
@@ -683,6 +833,8 @@ a
             font-size: 14px
             line-height: 21px
             color: #FFFFFF
+            &:hover
+                #063562
     .footer-webstripe
         background: #272727
         margin-top: 67px
@@ -730,7 +882,119 @@ a
             margin-top: 12px
 
         
-        
+@media (max-width: 1510px)
+    .footer
+        &__social
+            margin-right: 70px
+        &__mailing
+            .input-email
+                width: 287px
+        &__col
+            margin-right: 80px
+@media (max-width: 1400px)
+    .container
+        max-width: 1228px
+    .header
+        &__search 
+            input
+                width: 368px
+        &__logo
+            margin-left: 0
+    .discounts, .popular
+        .container
+            padding-left: 16px
+            padding-right: 16px
+        .nav-link
+            margin-right: 55px
+            // padding: 0
+    .discounts-slider .card, .popular-slider .card
+        padding-left: 16px
+        padding-right: 14px
+    .discounts-slider .card__img, .popular-slider .card__img
+        max-height: 154px
+        img
+            height: 100%
+            width: auto
+            margin: 0 auto
+    .discounts-slider .card__btn-trolley, .popular-slider .card__btn-trolley
+        // width: auto
+        width: 182px
+    .cards
+        &__item
+            width: 364px
+    .promo
+        .container
+            flex-direction: column
+        &__subtitle
+            margin-bottom: 15px
+        .wrap__text
+            margin-right: 0
+            margin-bottom: 30px
+        .wrap__cards
+            width: 100%
+            display: flex
+            justify-content: space-between
+            .cards__item
+                margin: 0
+    .footer .container
+        padding-left: 21px
+        padding-right: 0
+        // justify-content: space-between
+
+    .footer__col
+        padding-top: 18px
+    .footer__social
+        margin-right: 54px
+    .footer__col
+        margin-right: 0
+        &:nth-child(2)
+            margin-right: 71px     
+        &:nth-child(3)
+            margin-right: 72px
+        &:nth-child(4)
+            margin-right: 84px
+    .footer__mailing
+        padding-top: 18px
+    .footer__mailing .check-text
+        width: 206px
+        span
+            display: block
+            margin-top: 6px
+    .footer__mailing .footer-title
+        width: 284px
+    .footer__mailing .input-check_wrap
+        width: 284px
+    .footer__mailing .input-email
+        margin-bottom: 19px
+    .footer__mailing .input-check_wrap
+        align-items: flex-start
+    .footer .footer-webstripe .wrap
+        margin-left: 0px
+        margin-right: 11px
+        padding-bottom: 21px
+    .footer .footer-webstripe .container
+        padding-left: 9px
+    .footer .footer-webstripe
+        padding-top: 20px
+    .footer .footer-webstripe .privacy
+        display: none
+
+
+@media (max-width: 1200px)
+
+    .cards
+        .row
+            margin: 0 -12px
+            width: 100%
+            display: flex
+            justify-content: space-between
+    .cards__item
+
+        margin-right: 0
+    .discounts .nav-link, .popular .nav-link 
+        margin-right: 36px
+    .popular .nav
+        width: 1015px
 
 
 
