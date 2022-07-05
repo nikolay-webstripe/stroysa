@@ -262,7 +262,7 @@ a
                     background: #0655A0
         &-cross
             display: none
-            margin-top: 4px
+            margin-bottom: 2px
             margin-right: 13px
             width: 16px
             height: 16px
@@ -274,6 +274,7 @@ a
         &-btn
             display: flex
             justify-content: center
+            align-items: center
             width: 184px
             height: 43px
             background: #FFFFFF
@@ -285,6 +286,8 @@ a
                     display: block
             
             p
+                margin: 0
+                margin-bottom: 3px
                 font-weight: 500
                 font-size: 16px
                 line-height: 24px
@@ -295,19 +298,22 @@ a
         
     .nav-item
         position: relative
-        margin-right: 10px
+        margin-right: 27px
+        display: flex
+        align-items: center
         
 
         &:first-child
-            margin-right: 43px
+            margin-right: 51px
         .nav-link
+            padding: 0
             font-weight: 600
             font-size: 14px
             line-height: 19px
 
             color: #FFFFFF
     .dropdown
-        margin-right: 23px
+        margin-right: 39px
         &::after
             content: ""
             border: none
@@ -317,8 +323,8 @@ a
 
             background: url(../img/header/arrow.svg) center center no-repeat
             position: absolute
-            top: 14px
-            right: -8px
+            // top: 14px
+            right: -15px
         &-menu
             position: relative
             background: #FFFFFF
@@ -348,8 +354,8 @@ a
 
 .navbar
     &-icons
-        height: 43px
-        min-width: 250px  
+        margin-right: 13px
+        height: 43px 
         display: flex
         align-items: center
         &_item
@@ -359,8 +365,8 @@ a
             &::after
                 content: "2"
                 position: absolute
-                right: -7px
-                top: -3px
+                right: -9px
+                top: -4px
                 font-family: 'Poppins'
                 font-style: normal
                 font-weight: 700
@@ -381,12 +387,13 @@ a
             font-weight: 600
             font-size: 14px
             line-height: 19px
-            margin-left: 30px
+            margin-left: 21px
+            margin-bottom: 5px
 
             color: #FFFFFF
             .descr
                 align-self: flex-end
-                margin-bottom: 1px
+                margin-bottom: 4px
             img
                 margin-right: 6px
 .main-slider
@@ -884,11 +891,14 @@ a
 
 
 .modal
-    display: block
+    // display: block
+    &-dialog
+        max-width: 540px
     &-content
         height: auto
         width: auto
         padding: 65px 47px 52px 47px
+        border-radius: 0
 
     &-header
         border: none
@@ -917,6 +927,7 @@ a
             line-height: 16px
             text-transform: uppercase
             color: #191C1F
+            margin: 0
         &-control
             padding-left: 22px
             width: 446px
@@ -936,7 +947,8 @@ a
         font-weight: 400
         font-size: 11px
         line-height: 12px
-        color: #000000
+        color: #000000  
+        margin-bottom: 0
         a
             display: block
             font-weight: 400
@@ -945,7 +957,7 @@ a
             text-decoration-line: underline
             color: #000000
             margin-bottom: 14px
-    &-log-in
+    &-link
         font-weight: 400
         font-size: 14px
         line-height: 12px
@@ -953,7 +965,11 @@ a
         color: #0655A0
         margin: 0 auto
     &-footer
-        text-align: center
+        flex-direction: column
+        padding-bottom: 0
+        padding-top: 7px
+        border: none
+
 
     form
         .btn
@@ -965,6 +981,24 @@ a
             color: #FFFFFF
             width: 183px
             height: 50px
+
+.modal-log-in
+    // display: block
+    .modal
+        &-content
+            padding-bottom: 80px
+        &-footer
+            padding-top: 14px
+        
+
+.modal-registration
+    // display: block
+.modal-recovery
+    // display: block
+    .modal-content
+        padding-bottom: 60px
+.modal-callback
+    display: block
 
 
 
