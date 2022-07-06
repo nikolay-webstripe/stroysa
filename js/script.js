@@ -37,10 +37,19 @@ $(document).ready(function () {
           breakpoint: 1000,
           settings: {
             centerMode: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            centerMode: true,
             slidesToShow: 2,
             slidesToScroll: 1,
           }
         }
+        
         
       ]
     }
