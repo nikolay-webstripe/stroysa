@@ -932,15 +932,10 @@ a
             display: block
             text-align: center
             margin-top: 12px
-    .dropdown
-        &-menu
-            display: block
-            position: static
-            background-color: transparent
-            border: none
-            padding: 0
-        &-item
-            padding: 0
+    
+    .collapse:not(.show) 
+        display: block
+    
 
 
 
@@ -1394,27 +1389,30 @@ a
         display: none!important
 
     .footer
-        .show
-            display: block
+        br
+            display: none
+        .collapse:not(.show) 
+            display: none
+
         .container
+            padding-left: 100px
+            display: flex
             flex-direction: column
-            // width: 50%
+            align-items: flex-start
+        &__col
+            padding-top: 0
+        &__mailing
+            order: -4
+            .input-email
+                width: 100%
+            .footer-title
+                width: 100%
+        &_btn
+            margin-bottom: 10px
+
+
         &__social
             display: none
-        &__col
-            padding: 0
-        .dropdown
-            &-menu
-                display: none
-                padding: 0
-                margin: 0
-        &__mailing
-            flex: none
-            padding: 0
-
-
-        &__col_list
-            // display: none
                     
 
 

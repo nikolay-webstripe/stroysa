@@ -73,12 +73,5 @@ $(document).ready(function () {
     })
 
 
-    let footerTitle = document.querySelectorAll(".footer-title"),
-      dropdownMenu = document.querySelectorAll(".footer__col_list")
-    footerTitle.forEach(item =>{
-      item.addEventListener('click', () => {
-        dropdownMenu = document.querySelector(`${footerTitle}~.footer__col_list`)
-        console.log(dropdownMenu)
-      })
-    })
+
 });
