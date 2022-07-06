@@ -114,13 +114,22 @@ a
 //   xl: 1140px,
 //   xxl: 1636px
 // )
-    
-    
 
         
 
 .header
     min-height: 114px
+    .navbar-burger
+        display: none
+        padding-top: 10px
+        span
+            background-color: #FFF
+            display: block
+            width: 31px
+            height: 3px
+            margin-bottom: 6px
+            &:last-child
+                margin-bottom: 0
     .container
         min-height: 100%
         display: flex
@@ -305,6 +314,9 @@ a
 
         &:first-child
             margin-right: 51px
+            &::after
+                content: none
+
         .nav-link
             padding: 0
             font-weight: 600
@@ -353,6 +365,9 @@ a
         
 
 .navbar
+    &-collapse
+        .header__social
+            display: none
     &-icons
         margin-right: 13px
         height: 43px 
@@ -397,10 +412,17 @@ a
             img
                 margin-right: 6px
 .main-slider
+    height: 420px
     margin-top: 19px
-    slider_item
+    .slider_item
+        position: relative
+        height: 420px
+        border-radius: 4px
+        background: url(../img/main-slider/slider_1.jpg) center center no-repeat
         img
-            border-radius: 4px
+            position: absolute
+            top: 97px
+            left: 71px
     ul
         width: 20%
         bottom: 20px
@@ -435,14 +457,14 @@ a
 .discounts, .popular
     padding-left: 50px
     padding-right: 50px
-    padding-top: 45px
+    padding-top: 75px
     h2
         font-weight: 700
         font-size: 28px
         color: #000000
         margin-bottom: 26px
     .nav
-        width: 540px
+        max-width: 540px
         padding-left: 13px
         border-bottom: 2px solid #F5F5F5
         margin-bottom: 33px
@@ -601,7 +623,7 @@ a
     h2
         margin-bottom: 29px
     .nav
-        width: 1120px
+        max-width: 1120px
 .choise
     padding-top: 30px
     text-align: center
@@ -633,14 +655,25 @@ a
         background: #F5F5F5
         border-radius: 4px
         display: flex
-        justify-content: center
-        align-items: center
+        justify-content: space-between
+        align-items: flex-start
         margin-right: 53px
-        padding: 13px 32px 14px 34px
+        padding: 13px 19px 14px 18px
+        padding-bottom: 0
+        .wrap
+            height: 70px
+            padding-top: 3px
+            padding-left: 2px
+        .img
+            padding: 5px 15px 0 13px
         &:last-child
             margin-right: 0
-        .img
-            margin-right: 15px
+            .img
+                padding-left: 6px
+                padding-right: 12px
+            .wrap
+                padding-left: 0
+            
     &__title
         font-weight: 700
         font-size: 16px
@@ -649,7 +682,7 @@ a
     &__descr
         font-weight: 400
         font-size: 14px
-        line-height: 15px
+        line-height: 16px
         color: #000000
 
     .row
@@ -689,12 +722,16 @@ a
             margin-top: 22px
             margin-right: 110px
             height: 89px
-            padding: 23px 32px 14px 52px
-            .img
-                margin-right: 25px
+            padding: 13px 42px 14px 38px
+            // padding-top: 13px
+            .wrap
+                padding-top: 4px
+                padding-left: 11px
+            &:first-child
+                margin-top: 0 
             &:last-child
                 .img
-                    margin-right: 15px
+                    padding-top: 12px   
 
         &__title
             font-weight: 600
@@ -711,6 +748,12 @@ a
 .footer
     background: #F1F8FF
     padding-top: 24px
+    a
+        display: block
+        &:focus
+            color: #000
+        &:hover
+            color: #000
     .container
         padding-left: 94px
         display: flex
@@ -725,15 +768,12 @@ a
     &__time, &__phone
         display: flex
         align-items: flex-start
-        margin-bottom: 17px
+        margin-bottom: 14px
         width: 200px
         &-descr
             margin-top: -4px
         &-icon
             width: 31px
-            display: flex
-            justify-content: center
-            align-items: center
     &__phone
         &-icon
             margin-right: 8px
@@ -761,7 +801,7 @@ a
         color: #000000
         margin-bottom: 14px
     &__col
-        padding-top: 21px
+        padding-top: 18px
         // margin-right: 126px
         &:nth-child(2)
             margin-right: 96px
@@ -770,7 +810,7 @@ a
         &:nth-child(4)
             margin-right: 100px
             .footer__col_list
-                margin-bottom: 21px
+                margin-bottom: 23px
         &_list
             list-style: none
             padding: 0
@@ -782,7 +822,7 @@ a
             margin-bottom: 4px    
             display: block
     &__mailing
-        padding-top: 21px
+        padding-top: 18px
         .footer-title
             margin-bottom: 17px
         .input-email
@@ -809,6 +849,10 @@ a
             background: #FBFBFB
             border: 1px solid #EAEAEA
             border-radius: 3px
+            // input
+            //     position: absolute
+            //     z-index: -1
+            //     opacity: 0
         .check-text
             font-family: 'Exo 2'
             font-style: normal
@@ -868,6 +912,7 @@ a
                 color: #FFFFFF
                 margin: 0
                 margin-right: 70px
+                padding-bottom: 3px
         img
             &:nth-child(2)
                 margin-right: 27px
@@ -887,6 +932,15 @@ a
             display: block
             text-align: center
             margin-top: 12px
+    .dropdown
+        &-menu
+            display: block
+            position: static
+            background-color: transparent
+            border: none
+            padding: 0
+        &-item
+            padding: 0
 
 
 
@@ -989,6 +1043,12 @@ a
             padding-bottom: 80px
         &-footer
             padding-top: 14px
+    .form-item
+        position: relative
+        img
+            position: absolute
+            bottom: 17px
+            right: 24px
         
 
 .modal-registration
@@ -998,7 +1058,7 @@ a
     .modal-content
         padding-bottom: 60px
 .modal-callback
-    display: block
+    // display: block
 
 
 
@@ -1025,6 +1085,9 @@ a
                 width: 368px
         &__logo
             margin-left: 0
+            
+        .navbar-icons
+            margin-right: 0
     .discounts, .popular
         .container
             padding-left: 16px
@@ -1032,6 +1095,10 @@ a
         .nav-link
             margin-right: 55px
             // padding: 0
+        h2
+            margin-left: -1px
+        .nav
+            padding-left: 10px
     .discounts-slider .card, .popular-slider .card
         padding-left: 16px
         padding-right: 14px
@@ -1044,9 +1111,13 @@ a
     .discounts-slider .card__btn-trolley, .popular-slider .card__btn-trolley
         // width: auto
         width: 182px
+    .popular
+        padding-top: 54px
     .cards
         &__item
             width: 364px
+            &:last-child
+                padding-right: 18px
     .promo
         .container
             flex-direction: column
@@ -1060,7 +1131,16 @@ a
             display: flex
             justify-content: space-between
             .cards__item
+                padding-left: 25px
+                padding-top: 20px
                 margin: 0
+                &:nth-child(2)
+                    padding-left: 33px
+                &:nth-child(3)
+                    padding-left: 20px
+                    .wrap
+                        padding-left: 8px
+                    
     .footer .container
         padding-left: 21px
         padding-right: 0
@@ -1104,23 +1184,237 @@ a
     .footer .footer-webstripe .privacy
         display: none
 
+@media (max-width: 1200px)
+    .navbar-expand-lg 
+        display: block
 
 @media (max-width: 1200px)
+    .header
 
+        &__social
+            
+            display: none
+        .navbar
+            position: relative
+            .navbar-burger
+                display: block
+            &-collapse
+                position: absolute
+                top: 100%
+                left: 0
+                display: none!important
+                width: 30%
+
+        &>.show
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05)
+            border-top: 2px solid rgba(6, 85, 160, 0.19)
+        .show
+            display: block!important
+            background: #fff
+            z-index: 2
+
+            .header__social
+                display: block
+                background: #F5F5F5
+                padding: 13px 0 18px 20px
+                &>div
+                    padding-bottom: 11px
+                    &:last-child
+                        padding-bottom: 0
+                    span
+                        height: 17px
+                
+            .navbar-nav
+                padding: 22px 20px 0 20px
+                display: flex
+                flex-direction: column
+                .nav
+                    &-btn
+                        display: block
+                        width: auto
+                        height: auto
+                        background: none 
+                        p
+                            margin-bottom: 0
+                            font-weight: 600
+                            font-size: 14px
+                            line-height: 19px
+                            color: #000000
+                            
+                    &-item
+                        margin-right: 0
+                        padding-bottom: 27px
+                        &:first-child
+                            &::after
+                                content: ''
+                    &-link
+                        font-weight: 600
+                        font-size: 14px
+                        line-height: 19px
+                        color: #000000
+                        width: 100%
+                        .nav
+                            &-burger
+                                display: none
+                            &-cross
+                                display: none!important
+        .dropdown
+            .show
+
+            &::after
+                content: ''
+                border: none
+            
+                width: 8px
+                height: 16px
+
+                background: url(../img/header/arrow_black.svg) center center no-repeat
+                position: absolute
+                top: 2px
+                right: 0
+            &-menu
+                padding: 0
+                width: 100%
+
+                a
+                    font-weight: 600
+                    font-size: 12px
+                    line-height: 42px
+                    padding: 0
+                    padding-bottom: 4px
+
+
+        &__location
+            margin-right: 0
+            &-icon
+                margin-right: 10px
+                width: 31px
+                height: 31px
+            &-descr
+                font-size: 14px
+                line-height: 19px
+        &__time
+            display: flex
+            align-items: center
+            margin-right: 20px
+            &-icon
+                margin-right: 10px
+                width: 31px
+                height: 31px
+            &-descr
+                font-size: 14px
+                line-height: 24px
+        &__phone
+            display: flex
+            align-items: center
+            &-icon
+                margin-right: 10px
+                width: 31px
+                height: 31px
+            &-descr
+                span
+                    &:nth-last-child(1)
+                        a
+                            font-size: 14px
+                            line-height: 19px
+                    &:nth-last-child(2)
+                        a
+                            font-size: 14px
+                            line-height: 24px    
+
+
+        
+
+    // .cards
+    //     .row
+    //         margin: 0
+    //         width: 100%
+    //         display: flex
+    //         justify-content: space-between
+    // .cards__item
+
+    //     margin-right: 0
+
+    .promo
+        .wrap__cards
+            flex-wrap: wrap
+            justify-content: center
+            .cards__item
+                margin-right: 30px
+                margin-left: 30px
+                &:last-child
+                    margin-top: 50px
+                    margin-right: 0
+                    margin-left: 0
     .cards
         .row
-            margin: 0 -12px
-            width: 100%
-            display: flex
-            justify-content: space-between
-    .cards__item
-
-        margin-right: 0
+            flex-wrap: wrap
+            justify-content: center
+            .cards__item
+                margin-right: 30px
+                margin-left: 30px
+                &:last-child
+                    margin-top: 50px
+                    margin-right: 0
+                    margin-left: 0
     .discounts .nav-link, .popular .nav-link 
+
         margin-right: 36px
+    .discounts
+        .nav
+            max-width: 485px
+
     .popular .nav
-        width: 1015px
+        max-width: 1015px
+        justify-content: space-between
+        &>.nav-link
+            margin-right: 0
+    .footer
+        .container
+            justify-content: space-between
+            &>div
+                margin-right: 0
+
+@media (max-width: 1000px)
+    .discounts
+        .nav
+            &>a
+                margin-right: 0
+                padding: 0
+    .discounts, .popular
+        .nav
+            flex-direction: column
+            .active
+                width: 136px
+                border-bottom: 2px solid #0655A0
+
+                &::after
+                   content: none
+    .slick-arrow
+        display: none!important
+
+    .footer
+        .show
+            display: block
+        .container
+            flex-direction: column
+            // width: 50%
+        &__social
+            display: none
+        &__col
+            padding: 0
+        .dropdown
+            &-menu
+                display: none
+                padding: 0
+                margin: 0
+        &__mailing
+            flex: none
+            padding: 0
 
 
+        &__col_list
+            // display: none
+                    
 
 
