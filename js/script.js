@@ -1,6 +1,29 @@
 
 
 $(document).ready(function () {
+    //nav-slider
+    $('.nav-slider').slick({
+      dots: false,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      arrows: false,
+      infinite: false,
+      swipeToSlide: true,
+      variableWidth: true,
+      responsive: [
+        {
+          breakpoint: 1401,
+          settings: {
+            variableWidth: false,
+            slidesToShow: 4,
+            vertical: true,
+            verticalSwiping: true,
+            swipeToSlide: true,
+          }
+        }
+      ]
+    }
+    );
     //slider
     $('.slider').slick({
       adaptiveHeight: true,
@@ -18,9 +41,10 @@ $(document).ready(function () {
       autoplay: true,
       autoplaySpeed: 10000000,
       adaptiveHeight: false,
+      swipeToSlide: true,
       responsive: [
         {
-          breakpoint: 1400,
+          breakpoint: 1401,
           settings: {
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -48,7 +72,16 @@ $(document).ready(function () {
             slidesToShow: 2,
             slidesToScroll: 1,
           }
-        }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            // centerMode: true,
+            slidesToShow: 1.8,
+            slidesToScroll: 1,
+          }
+        },
+        
         
         
       ]
@@ -73,5 +106,27 @@ $(document).ready(function () {
     })
 
 
+    //.promo text hide
+
+    let toggler = document.querySelectorAll('.toggler-text'),
+      text = document.querySelectorAll('.hiding-text');
+
+    toggler.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        text.forEach(text => {
+          text.classList.toggle('hide');
+        })
+        toggler.forEach(item => {
+          item.classList.toggle('hide');
+        })
+    })
+      // toggler.classList.toggle('hide');
+    })
+
+    //asdfasdf
+    let title = document.querySelectorAll('.card-title');
+    title.forEach(item => {
+      console.log(item.clientHeight)
+    })
 
 });

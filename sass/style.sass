@@ -464,23 +464,33 @@ a
         color: #000000
         margin-bottom: 26px
     .nav
-        max-width: 540px
+        display: block
+
+
+        // max-width: 540px
         padding-left: 13px
-        border-bottom: 2px solid #F5F5F5
+        // border-bottom: 2px solid #F5F5F5
         margin-bottom: 33px
         padding-bottom: 7px
 
         .active
             color: #000000
+            margin-left: 19px
+            margin-right: 19px
+            padding-right: 8px
+            padding-left: 8px
+            border-bottom: 2px solid #0655A0
             &::after
                 content: ''
                 position: absolute
-                left: -12%
-                bottom: -9px
+                left: -19px
+                bottom: -2px
                 display: block
-                width: 125%
-                height: 2px 
-                background-color: #0655A0
+                width: 144px
+                height: 2px
+                background-color: #F5F5F5
+                z-index: -1
+
             
         &-link
             position: relative
@@ -489,9 +499,11 @@ a
             line-height: 19px
             color: #818181
             padding: 0
-            margin-right: 54px
-            &:last-child
-                margin-right: 0
+            padding-left: 27px
+            padding-right: 27px
+            padding-bottom: 6px
+            border-bottom: 2px solid #F5F5F5
+
         .view-all
             font-weight: 600
             color: #0655A0
@@ -534,6 +546,13 @@ a
             justify-content: space-between
             &__img  
                 height: 154px
+                display: flex
+                justify-content: center
+                align-items: center
+                img
+                    width: auto
+                    height: auto
+
             &__label
                 position: absolute
                 width: 90px
@@ -623,7 +642,7 @@ a
     h2
         margin-bottom: 29px
     .nav
-        max-width: 1120px
+        // max-width: 1120px
 .choise
     padding-top: 30px
     text-align: center
@@ -690,6 +709,8 @@ a
         
             
 .promo
+    .toggler-text
+        display: none
     .container
         display: flex
         justify-content: space-between
@@ -900,6 +921,8 @@ a
             justify-content: space-between
             align-items: flex-end
             border-bottom: 1px solid #BFBDBD
+        .img-wrap
+            display: flex
         
         .payment
             display: flex
@@ -914,6 +937,8 @@ a
                 margin-right: 70px
                 padding-bottom: 3px
         img
+            &:nth-child(1)
+                margin-right: 32px
             &:nth-child(2)
                 margin-right: 27px
             &:nth-child(3)
@@ -1088,7 +1113,7 @@ a
             padding-left: 16px
             padding-right: 16px
         .nav-link
-            margin-right: 55px
+            // margin-right: 55px
             // padding: 0
         h2
             margin-left: -1px
@@ -1100,7 +1125,6 @@ a
     .discounts-slider .card__img, .popular-slider .card__img
         max-height: 154px
         img
-            height: 100%
             width: auto
             margin: 0 auto
     .discounts-slider .card__btn-trolley, .popular-slider .card__btn-trolley
@@ -1374,8 +1398,10 @@ a
     .discounts
         .nav
             &>a
+                
                 margin-right: 0
                 padding: 0
+
     .discounts, .popular
         .nav
             flex-direction: column
@@ -1385,10 +1411,32 @@ a
 
                 &::after
                    content: none
+        .card__img
+            max-height: 100px 
+            img
+                height: 100%
     .slick-arrow
         display: none!important
 
     .footer
+
+                    
+        &-title
+            position: relative
+            width: 242px
+            &::after
+                content: ''
+                width: 19px
+                height: 8px
+                background: url(../img/footer/arrow_blue.svg)
+                position: absolute
+                top: 4px
+                right: 0
+        &-title:not(.collapsed)
+            &::after
+                transform: rotate(180deg)
+            
+
         br
             display: none
         .collapse:not(.show) 
@@ -1396,6 +1444,7 @@ a
 
         .container
             padding-left: 100px
+            padding-right: 100px
             display: flex
             flex-direction: column
             align-items: flex-start
@@ -1407,12 +1456,270 @@ a
                 width: 100%
             .footer-title
                 width: 100%
+                &::after
+                    content: none
         &_btn
             margin-bottom: 10px
 
 
         &__social
             display: none
+        .footer-webstripe
+            .container
+                padding-left: 0
+                padding-right: 0
+            .wrap
+                padding-left: 20px
+                padding-right: 20px
+                margin-right: 0
+
+@media (max-width: 900px)
+    .promo
+        .container
+            padding: 0
+        .wrap__cards
+            flex-direction: column
+            align-items: center
+            .cards__item
+                margin: 0 0 9px 0!important
+                // width: 100%
+    .map
+        margin-top: 13px
+    .cards
+        .container 
+            padding: 0
+            .row
+                flex-direction: column
+                align-items: center
+                .cards__item
+                    margin: 0 0 9px 0
+                
+
+@media (max-width: 700px)
+    .discounts, .popular
+        padding-right: 0
+        padding-left: 0
+    .promo
+        .toggler-text
+            display: inline
+            font-weight: 600
+            font-size: 14px
+            line-height: 16px
+            color: #0655A0
+            text-decoration: underline
+        .hide
+            display: none
+
+    .footer-webstripe
+        .payment
+            width: 100%
+            justify-content: space-between
+            &-text
+                margin-right: 0!important
+            img
+                &:nth-child(3)
+                    margin-right: 0
+                    
+@media (max-width: 600px)
+    .discounts, .popular
+        .card 
+            &__btn-trolley
+                width: 74px
+                height: 37px
+                span
+                    display: none
+        .btn-wrap
+            display: flex
+            justify-content: space-between
+
+
+@media (max-width: 500px)
+    .discounts, .popular
+        .card 
+            &__label
+                left: 0
+    .footer
+        br
+            display: inline
+        .container
+            align-items: stretch
+            padding-left: 5%
+            padding-right: 5%
+        
+        &_btn
+            width: 100%!important
+        &__mailing
+            width: 100%
+        a
+            width: 100%
+        &-webstripe
+            .payment
+                
+                flex-direction: column
+                align-items: center!important
+
+// lsdkfjlksf{}
+@media (max-width: 400px)
+    .header__logo
+        width: 56px
+
+    .discounts, .popular
+        h2
+            font-size: 20px
+            line-height: 23px
+        nav
+            width: 250px
+            .active
+                &::after
+                    content: none
+            .nav-link
+                border-bottom: none
+                font-size: 14px
+                line-height: 16px
+    .choise
+        padding-left: 20px
+        padding-right: 20px
+        
+    .cards
+        padding-bottom: 27px
+        &__item
+            .img
+                width: 53px
+                padding: 7px 0px 0 6px
+            &:nth-child(2)
+                .img
+                    padding-left: 9px
+            &:nth-child(2)
+                .img
+                    padding-left: 9px
+            &:nth-child(3)
+                .img
+                    padding-left: 3px
+                    padding-right: 0
+            .wrap
+                padding-left: 14px!important
+
+    .promo
+        .container
+        .wrap__text
+            padding: 0 20px
+            margin-bottom: 8px
+            h1
+                font-size: 20px
+                line-height: 23px
+        &__subtitle
+            font-size: 16px
+            line-height: 26px
+            margin-bottom: 6px
+        &__descr
+            font-size: 14px
+            line-height: 22px
+            padding-left: 0
+            text-align: justify
+            p
+                margin-bottom: 8px
+        .wrap__cards
+            .cards__item
+                .img
+                    padding: 0 0 0 4px
+                &:nth-child(2)
+                    padding-left: 30px
+                    .img
+                        padding: 2px 0 0 0
+                &:nth-child(3)
+                    .img
+                        padding: 10px 0 0 5px
+                    .wrap
+                        padding-left: 32px!important
+            .wrap
+                padding-left: 26px!important
+                .cards__title
+                    position: relative
+                    top: -5px   
+                    margin-bottom: 0
+                .cards__descr
+                    line-height: 17px
+                    
+
                     
 
 
+                
+    .discounts-slider, .popular-slider
+        .card
+            padding-top: 14px
+            &-body
+                padding-top: 7px
+            &__product-code
+                font-size: 10px
+                line-height: 14px
+                margin-bottom: 5px
+            &-title
+                font-size: 12px
+                line-height: 16px
+            &__old-price
+                font-size: 12px
+                line-height: 15px
+            &__new-price
+                font-size: 14px
+                line-height: 17px
+            &-body
+                min-height: auto
+
+    .cards
+        .row
+            width: 100%
+            margin: 0
+        &__item
+            width: 100%
+            border-radius: 0
+
+    .map
+        margin-bottom: 40px
+    .footer
+        padding-top: 7px
+        .container 
+            padding-left: 20px
+            padding-right: 20px
+        &__mailing
+            .footer-title
+                // padding-top: 20px
+                padding-left: 2px
+                font-size: 14px
+                line-height: 16px
+                margin-bottom: 21px
+            .input-email
+                margin-bottom: 14px
+            .input-check_wrap
+                margin-bottom: 17px
+                .input-check
+                    margin-right: 8px
+                .check-text
+                    font-size: 10px
+                    line-height: 14px
+                    span
+                        font-size: 10px
+                        line-height: 14px
+                        margin-top: 1px
+        &_btn
+            margin-bottom: 30px
+        a
+            margin-bottom: 16px
+            &::after
+                top: 6px
+                right: 9px
+        .footer-webstripe
+            margin-top: 10px
+            padding-top: 12px
+            .wrap
+                .payment
+                    &-text
+                        font-size: 12px
+                        line-height: 16px
+                    .img-wrap      
+                            img
+                                &:nth-child(1)
+                                    height: 16px
+                                &:nth-child(2)
+                                &:nth-child(3)
+                            
