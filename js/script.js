@@ -1,18 +1,38 @@
 
 
 $(document).ready(function () {
+  //
+
+  $('ul.noclose').on('click', function(event){
+    event.stopPropagation();
+  });
+    ////
+  const itemCatalog = document.querySelectorAll('.item-catalog')
+  const subCatalog = document.querySelectorAll('.subcategories')
+  itemCatalog.forEach(item => {
+    item.addEventListener('click', (e) => {
+      itemCatalog.forEach(link => {
+        link.classList.remove('show');
+        subCatalog.forEach(sub => {
+          sub.classList.remove('show');
+        })
+      }) 
+    })
+  })
+
+
     //nav-slider
     $('.nav-slider').slick({
       dots: false,
       slidesToShow: 6,
-      slidesToScroll: 1,
       arrows: false,
       infinite: false,
       swipeToSlide: true,
       variableWidth: true,
+      touchThreshold: 1,
       responsive: [
         {
-          breakpoint: 1401,
+          breakpoint: 401,
           settings: {
             variableWidth: false,
             slidesToShow: 4,
@@ -123,10 +143,16 @@ $(document).ready(function () {
       // toggler.classList.toggle('hide');
     })
 
-    //asdfasdf
-    let title = document.querySelectorAll('.card-title');
-    title.forEach(item => {
-      console.log(item.clientHeight)
-    })
 
+
+    //
+    // let dropdownItem = document.createElement('div')
+    const navItem = document.querySelectorAll('.nav-item')
+    let navbarNav = document.querySelector('.navbar-nav')
+    navItem.forEach(item => {
+      item.addEventListener('click', () => {
+        let dropdownItem = item.childNodes[3].cloneNode(true);
+        navbarNav.append(dropdownItem);
+      })
+    })
 });

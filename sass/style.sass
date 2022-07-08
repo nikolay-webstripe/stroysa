@@ -1,3 +1,28 @@
+@font-face
+    font-family: 'Poppins'
+    font-style: normal
+    font-weight: 300
+    src: url(../fonts/Poppins-Light.ttf)
+
+    font-family: 'Poppins'
+    font-style: normal
+    font-weight: 400
+    src: url(../fonts/Poppins-Regular.ttf)
+
+    font-family: 'Poppins'
+    font-style: normal
+    font-weight: 600
+    src: url(../fonts/Poppins-SemiBold.ttf)
+
+    font-family: 'Poppins'
+    font-style: normal
+    font-weight: 700
+    src: url(../fonts/Poppins-Bold.ttf)
+
+
+
+
+
 @font-face 
   font-family: 'icons';
   src:  url('fonts/icons.eot?c74v0x');
@@ -119,6 +144,8 @@ a
 
 .header
     min-height: 114px
+    .logo_mobile
+        display: none
     .navbar-burger
         display: none
         padding-top: 10px
@@ -139,7 +166,7 @@ a
         width: 90px
         display: flex
         flex-direction: column
-        margin: 17px 0 11px 14px
+        margin: 17px 0 11px 7px
     &__wrap
         margin-top: 41px
         display: flex
@@ -190,7 +217,7 @@ a
     &__time
         display: flex
         align-items: center
-        margin-right: 20px
+        margin-right: 23px
         &-icon
             margin-right: 8px
             height: 42px
@@ -203,6 +230,7 @@ a
             line-height: 22px
             color: #000000
     &__phone
+        height: 41px
         display: flex
         align-items: center
         &-icon
@@ -362,8 +390,86 @@ a
             a
                 padding: 0
                 padding-bottom: 4px
-        
+    .dropdown-catalog
+        width: 506px
+        padding: 11px 0
+        border: 1px solid #D9D9D9 
+        z-index: 1
+        .item-catalog-wrap
+            display: flex
+        &::after
+            z-index: 0
+        a
+            font-weight: 600
+            font-size: 14px
+            line-height: 42px
+            color: #000000
+            padding: 0
+            display: flex
+            border-bottom: 1px solid #D9D9D9
+            height: 41px
+            justify-content: space-between
+            align-items: center
+            padding-left: 21px
+            padding-right: 16px
+            img
+                margin-right: 14px
+        .dropend
+            .show
+                &::after
+                    transform: rotate(180deg)
+                &::before
+                    content: ''
+                    display: block
+                    width: 0
+                    height: 0
+                    border-style: solid;
+                    border-width: 18px 15px 18px 15px
+                    border-color: transparent transparent #fff transparent
+                    position: absolute
+                    right: -15px
+                    transform: rotate(-90deg)
+            .dropdown-menu
 
+                left: 103%
+
+            .dropdown-toggle
+
+                &::after
+                    width: 8px
+                    height: 15px
+                    border: 0
+                    background: url(../img/header/catalog/arrow.svg) center center no-repeat
+            &:last-child
+                a
+                    border-bottom: 0
+
+    .subcategories
+        width: 672px
+        height: 513px
+        padding: 26px 36px
+        .title-dropdown
+            font-weight: 700
+            font-size: 25px
+            line-height: 75px
+            color: #000000
+        .wrap
+            height: 410px
+            display: flex
+            flex-direction: column
+            flex-wrap: wrap
+        .subcategories-item
+            font-weight: 600
+            font-size: 12px
+            line-height: 41px
+            color: #000000
+            border-bottom: 0
+            padding-left: 0
+            padding-right: 0
+        &::after 
+            content: none
+        &::before
+            content: none!important
 .navbar
     &-collapse
         .header__social
@@ -373,6 +479,8 @@ a
         height: 43px 
         display: flex
         align-items: center
+        &-search
+            display: none
         &_item
             height: 23px
             position: relative
@@ -468,9 +576,9 @@ a
 
 
         // max-width: 540px
-        padding-left: 13px
+        padding-left: 7px
         // border-bottom: 2px solid #F5F5F5
-        margin-bottom: 33px
+        margin-bottom: 26px
         padding-bottom: 7px
 
         .active
@@ -637,10 +745,10 @@ a
                     display: inline
 
 .popular
-    padding-top: 51px
+    padding-top: 53px
     padding-bottom: 59px
     h2
-        margin-bottom: 29px
+        margin-bottom: 31px
     .nav
         // max-width: 1120px
 .choise
@@ -648,7 +756,7 @@ a
     text-align: center
     width: 100%
     height: 144px
-    background: url(../img/choise/bg.jpg) center center no-repeat
+    background: #F5F5F5 url(../img/choise/bg.jpg) center center no-repeat
     &__btn
         width: 274px
         height: 47px
@@ -681,7 +789,7 @@ a
         padding-bottom: 0
         .wrap
             height: 70px
-            padding-top: 3px
+            // padding-top: 3px
             padding-left: 2px
         .img
             padding: 5px 15px 0 13px
@@ -694,6 +802,7 @@ a
                 padding-left: 0
             
     &__title
+        margin-bottom: 2px
         font-weight: 700
         font-size: 16px
         line-height: 14px
@@ -744,22 +853,37 @@ a
             margin-right: 110px
             height: 89px
             padding: 13px 42px 14px 38px
+            .img
+                padding-top: 10px
+                width: 53px
             // padding-top: 13px
-            .wrap
-                padding-top: 4px
-                padding-left: 11px
-            &:first-child
-                margin-top: 0 
-            &:last-child
+            &:nth-child(2)
                 .img
-                    padding-top: 12px   
+                    padding-top: 14px
+            &:nth-child(3)
+                .img
+                    padding-top: 18px
+                .wrap
+                    padding-top: 4px
+                    padding-left: 11px
+            .wrap
+                &:nth-child(n)
+                    padding: 0
+                    padding-left: 37px
+                    padding-top: 9px
+                    
+            // &:first-child
+            //     margin-top: 0 
+            // &:last-child
+            //     .img
+            //         padding-top: 12px   
 
         &__title
             font-weight: 600
             margin-bottom: 4px
 .map
     // padding: 46px 0 44px 0
-    margin: 46px 0 44px 0
+    margin: 52px 0 44px 0
     width: 100%
     height: 321px
     div
@@ -938,9 +1062,9 @@ a
                 padding-bottom: 3px
         img
             &:nth-child(1)
-                margin-right: 32px
+                margin-right: 26px
             &:nth-child(2)
-                margin-right: 27px
+                margin-right: 29px
             &:nth-child(3)
                 margin-right: 30px
 
@@ -1108,6 +1232,9 @@ a
             
         .navbar-icons
             margin-right: 0
+            &_item
+                margin-right: 24px
+
     .discounts, .popular
         .container
             padding-left: 16px
@@ -1115,6 +1242,10 @@ a
         .nav-link
             // margin-right: 55px
             // padding: 0
+            &:first-child
+                margin-left: 0
+                padding-left: 0
+                
         h2
             margin-left: -1px
         .nav
@@ -1131,44 +1262,88 @@ a
         // width: auto
         width: 182px
     .popular
-        padding-top: 54px
+        padding-top: 82px
+        padding-bottom: 51px
     .cards
         &__item
+            padding-top: 15px
+            .wrap
+                padding-left: 15px
             width: 364px
-            &:last-child
-                padding-right: 18px
+            .img
+                width: 59px
+                padding: 0
+                padding-left: 9px
+                padding-top: 4px
+            &:nth-child(2)
+                .img
+                    padding-left: 16px
+            &:nth-child(3)
+                .img
+                    padding: 0
+                    padding-top: 6px
+                    padding-left: 2px
+                .wrap
+                    padding-left: 15px
+
     .promo
         .container
             flex-direction: column
         &__subtitle
-            margin-bottom: 15px
+            margin-bottom: 13px
         .wrap__text
             margin-right: 0
-            margin-bottom: 30px
+            margin-bottom: 19px
+            .promo__descr
+                padding-left: 0
         .wrap__cards
             width: 100%
             display: flex
             justify-content: space-between
             .cards__item
-                padding-left: 25px
-                padding-top: 20px
+                padding-left: 29px
+                padding-top: 8px
                 margin: 0
-                &:nth-child(2)
-                    padding-left: 33px
-                &:nth-child(3)
-                    padding-left: 20px
+                .cards__title
+                    margin-bottom: 6px
+                &:nth-child(1)
                     .wrap
-                        padding-left: 8px
+                        padding-left: 32px
+                        padding-top: 11px
+                    
+                &:nth-child(2)
+                    .wrap
+                        padding-top: 11px
+                    padding-left: 30px
+                &:nth-child(3)
+                    padding-left: 25px
+                    padding-right: 15px
+                    .wrap
+                        padding-left: 29px
+    .map
+        margin-top: 41px
+        margin-bottom: 42px
                     
     .footer .container
         padding-left: 21px
         padding-right: 0
         // justify-content: space-between
-
+    
     .footer__col
         padding-top: 18px
     .footer__social
         margin-right: 54px
+    .footer__time
+        margin-bottom: 12px
+    .footer__phone
+        align-items: center
+        &-icon
+            justify-content: start
+            padding-left: 1px
+            margin-right: 5px
+        &-descr
+            margin-top: 0
+
     .footer__col
         margin-right: 0
         &:nth-child(2)
@@ -1192,14 +1367,15 @@ a
         margin-bottom: 19px
     .footer__mailing .input-check_wrap
         align-items: flex-start
+    .footer .footer-webstripe
+        margin-top: 70px
+        padding-top: 24px
     .footer .footer-webstripe .wrap
         margin-left: 0px
         margin-right: 11px
         padding-bottom: 21px
     .footer .footer-webstripe .container
         padding-left: 9px
-    .footer .footer-webstripe
-        padding-top: 20px
     .footer .footer-webstripe .privacy
         display: none
 
@@ -1489,6 +1665,8 @@ a
         .container 
             padding: 0
             .row
+                margin-right: 0
+                margin-left: 0
                 flex-direction: column
                 align-items: center
                 .cards__item
@@ -1521,6 +1699,95 @@ a
                     margin-right: 0
                     
 @media (max-width: 600px)
+    body
+        padding-bottom: 60px
+    .hide
+        display: none
+    .header
+        display: flex
+        flex-direction: column-reverse
+        .logo_mobile
+            display: block
+        .container
+            padding-left: 20px
+            padding-right: 20px
+        &__wrap
+            margin-top: 14px
+            display: block
+            width: 100%
+            form
+                margin-right: 0
+            input
+                width: 100%
+        &__logo
+            display: none
+        .navbar
+            height: 69px
+            background: #FFFFFF
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05)
+            .container
+                flex-direction: row-reverse
+                align-items: center
+            &-burger
+                padding-top: 0
+                span
+                    background: #0655A0
+        .navbar-icons
+            display: flex
+            justify-content: space-around
+            height: 60px
+            position: fixed
+            left: 0
+            bottom: 0
+            background: #FFFFFF;
+            box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.05);
+            z-index: 2
+            width: 100%
+            &_item
+                margin: 0
+                width: 20px
+                height: 20px
+                &::after
+                    background: #0655A0
+                    color: #FFF
+            a
+                padding: 10px
+                &:nth-child(1)
+                    .navbar-icons_item
+                        background: url(../img/header/search_black.svg) center center no-repeat   
+                    
+                &:nth-child(2)
+                    .navbar-icons_item
+                        background: url(../img/header/balance_black.svg) center center no-repeat
+                &:nth-child(3)
+                    .navbar-icons_item
+                        background: url(../img/header/heart_black.svg) center center no-repeat
+                &:nth-child(4)
+                    .navbar-icons_item
+                        background: url(../img/header/trolley_black.svg) center center no-repeat
+                
+                .navbar-icons__profile
+                    margin: 0
+                    width: 20px
+                    height: 20px
+                    background: url(../img/header/profile_black.svg) center center no-repeat
+                    
+            &-search
+                display: block
+            img
+                display: none
+            &__profile
+                .descr
+                    display: none
+        .navbar-collapse
+            width: 100%
+            top: 73px
+        .dropdown
+            
+            &::after
+                transform: rotate(90deg)            
+    .main-slider
+        margin-top: 13px
     .discounts, .popular
         .card 
             &__btn-trolley
@@ -1562,25 +1829,54 @@ a
 @media (max-width: 400px)
     .header__logo
         width: 56px
-
+    .header
+        &__wrap 
+            input
+                height: 36px
+                padding-left: 18px
+        &__search-icon
+            width: 38px
+            height: 38px
+            background-size: 18px
+    .main-slider
+        height: 315px
+        .container
+            padding-left: 0
+            padding-right: 0
+            .slider
+                &_item
+                    height: 315px
+                    border-radius: 0
     .discounts, .popular
         h2
             font-size: 20px
             line-height: 23px
         nav
-            width: 250px
+            width: 163px
             .active
                 &::after
                     content: none
+                    padding-left: 0
+                    padding-right: 0
+                    margin-left: 0
+                    margin-right: 0
             .nav-link
+                padding-left: 0
+                padding-right: 0
+                margin-left: 0
+                margin-right: 0
                 border-bottom: none
                 font-size: 14px
                 line-height: 16px
     .choise
+        height: 157px
+        padding-top: 24px
         padding-left: 20px
         padding-right: 20px
+        padding-bottom: 21px
         
     .cards
+        padding-top: 10px
         padding-bottom: 27px
         &__item
             .img
@@ -1620,17 +1916,29 @@ a
                 margin-bottom: 8px
         .wrap__cards
             .cards__item
+                padding-top: 20px
                 .img
-                    padding: 0 0 0 4px
+                    padding: 0
+                &:nth-child(1)
+                    .wrap
+                        padding-top: 0
+                        padding-top: 4px
+                        padding-left: 23px!important
                 &:nth-child(2)
+                    .wrap
+                        padding-top: 0
+                        padding-top: 4px
+                        padding-left: 24px!important
                     padding-left: 30px
                     .img
                         padding: 2px 0 0 0
                 &:nth-child(3)
-                    .img
-                        padding: 10px 0 0 5px
                     .wrap
-                        padding-left: 32px!important
+                        padding-top: 0
+                        padding-top: 4px
+                        padding-left: 27px!important
+                    .img
+                        padding: 10px 0 0 0
             .wrap
                 padding-left: 26px!important
                 .cards__title
@@ -1644,8 +1952,11 @@ a
                     
 
 
+        
+
                 
     .discounts-slider, .popular-slider
+        
         .card
             padding-top: 14px
             &-body
