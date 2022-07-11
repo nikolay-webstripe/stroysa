@@ -140,10 +140,15 @@ a
 //   xxl: 1636px
 // )
 
-        
+.show-modal 
+    display: block  
+    
+.hide-modal 
+    display: none   
 
 .header
     min-height: 114px
+
     .logo_mobile
         display: none
     .navbar-burger
@@ -353,6 +358,8 @@ a
 
             color: #FFFFFF
     .dropdown
+        .back
+            display: none
         margin-right: 39px
         &::after
             content: ""
@@ -367,6 +374,7 @@ a
             right: -15px
         &-menu
             position: relative
+            top: 48px
             background: #FFFFFF
             border-radius: 0
             border: none
@@ -398,7 +406,7 @@ a
         .item-catalog-wrap
             display: flex
         &::after
-            z-index: 0
+            display: none
         a
             font-weight: 600
             font-size: 14px
@@ -481,6 +489,12 @@ a
         align-items: center
         &-search
             display: none
+
+
+        .descr-mobile
+            display: none
+
+
         &_item
             height: 23px
             position: relative
@@ -503,22 +517,46 @@ a
                 display: flex
                 align-items: center
                 justify-content: center
+            
                 
 
         &__profile
-            display: flex
-            font-weight: 600
-            font-size: 14px
-            line-height: 19px
-            margin-left: 21px
-            margin-bottom: 5px
+            position: relative
+            .nav-link
+                padding: 0
+            .navbar-icons_item
+                padding: 0
+                margin: 0
+                &::after
+                    content: none
+            a
+                display: flex
+                font-weight: 600
+                font-size: 14px
+                line-height: 19px
+                margin-left: 21px
+                margin-bottom: 5px
 
-            color: #FFFFFF
-            .descr
-                align-self: flex-end
-                margin-bottom: 4px
-            img
-                margin-right: 6px
+                color: #FFFFFF
+                &:hover
+                    color: #FFFF
+                .descr
+                    align-self: flex-end
+                img
+                    margin-right: 6px
+            .dropdown-menu
+                position: absolute
+                width: 126px
+                top: 54px
+                left: 10px
+                li
+                    a
+                        font-weight: 400
+                        font-size: 13px
+                        line-height: 27px
+                        color: #000000
+                        width: auto
+                        margin-left: 0
 .main-slider
     height: 420px
     margin-top: 19px
@@ -572,7 +610,7 @@ a
         color: #000000
         margin-bottom: 26px
     .nav
-        display: block
+        display: flex
 
 
         // max-width: 540px
@@ -591,10 +629,10 @@ a
             &::after
                 content: ''
                 position: absolute
-                left: -19px
+                left: -25px
                 bottom: -2px
                 display: block
-                width: 144px
+                width: 220px
                 height: 2px
                 background-color: #F5F5F5
                 z-index: -1
@@ -1081,6 +1119,8 @@ a
             display: block
             text-align: center
             margin-top: 12px
+            img
+                margin-right: 0
     
     .collapse:not(.show) 
         display: block
@@ -1234,6 +1274,8 @@ a
             margin-right: 0
             &_item
                 margin-right: 24px
+        .navbar-icons__profile .navbar-icons_item
+            margin-right: 0
 
     .discounts, .popular
         .container
@@ -1378,6 +1420,30 @@ a
         padding-left: 9px
     .footer .footer-webstripe .privacy
         display: none
+@media (max-width: 1300px)
+    .discounts, .popular
+        .scroll
+            height: 100px
+            overflow: scroll
+            margin-bottom: 26px
+        .nav
+            max-width: 220px
+            flex-direction: column
+            margin-bottom: 0
+
+            &-link
+                border: none
+                &:first-child
+                    margin-left: 19px
+                    padding-left: 8px
+            .active
+                &::after
+                    content: none
+    .discounts
+        .nav
+            max-width: 165px
+                    
+
 
 @media (max-width: 1200px)
     .navbar-expand-lg 
@@ -1385,6 +1451,9 @@ a
 
 @media (max-width: 1200px)
     .header
+        .navbar-icons__profile
+            .nav-link
+                display: flex
 
         &__social
             
@@ -1399,6 +1468,14 @@ a
                 left: 0
                 display: none!important
                 width: 30%
+            &-icons__profile
+                .show
+                    display: flex!important
+                    background: none
+                .dropdown-menu
+                    flex-direction: column
+                    background: #FFF
+
 
         &>.show
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.05)
@@ -1520,16 +1597,6 @@ a
 
         
 
-    // .cards
-    //     .row
-    //         margin: 0
-    //         width: 100%
-    //         display: flex
-    //         justify-content: space-between
-    // .cards__item
-
-    //     margin-right: 0
-
     .promo
         .wrap__cards
             flex-wrap: wrap
@@ -1552,18 +1619,10 @@ a
                     margin-top: 50px
                     margin-right: 0
                     margin-left: 0
-    .discounts .nav-link, .popular .nav-link 
 
-        margin-right: 36px
-    .discounts
-        .nav
-            max-width: 485px
 
-    .popular .nav
-        max-width: 1015px
-        justify-content: space-between
-        &>.nav-link
-            margin-right: 0
+
+
     .footer
         .container
             justify-content: space-between
@@ -1571,22 +1630,10 @@ a
                 margin-right: 0
 
 @media (max-width: 1000px)
-    .discounts
-        .nav
-            &>a
-                
-                margin-right: 0
-                padding: 0
+
 
     .discounts, .popular
-        .nav
-            flex-direction: column
-            .active
-                width: 136px
-                border-bottom: 2px solid #0655A0
 
-                &::after
-                   content: none
         .card__img
             max-height: 100px 
             img
@@ -1733,8 +1780,10 @@ a
                 span
                     background: #0655A0
         .navbar-icons
+            padding-left: 35px
+            padding-right: 20px
             display: flex
-            justify-content: space-around
+            justify-content: flex-start
             height: 60px
             position: fixed
             left: 0
@@ -1743,49 +1792,90 @@ a
             box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.05);
             z-index: 2
             width: 100%
+            >a
+                display: flex
+                flex-direction: column
+                align-items: center
+            .navbar-icons__profile
+                >a
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    margin: 0
+                    .descr
+                        font-weight: 600
+                        font-size: 10px
+                        line-height: 14px
+                        color: #333333
             &_item
                 margin: 0
+                margin-bottom: 3px
                 width: 20px
                 height: 20px
+
                 &::after
                     background: #0655A0
                     color: #FFF
             a
-                padding: 10px
+                // padding: 10px
                 &:nth-child(1)
+                    margin-right: 18px
                     .navbar-icons_item
                         background: url(../img/header/search_black.svg) center center no-repeat   
+                        &::after
+                            content: none
                     
                 &:nth-child(2)
+                    margin-right: 12px
                     .navbar-icons_item
                         background: url(../img/header/balance_black.svg) center center no-repeat
                 &:nth-child(3)
+                    margin-right: 18px
                     .navbar-icons_item
                         background: url(../img/header/heart_black.svg) center center no-repeat
                 &:nth-child(4)
+                    margin-right: 23px
                     .navbar-icons_item
                         background: url(../img/header/trolley_black.svg) center center no-repeat
                 
-                .navbar-icons__profile
-                    margin: 0
-                    width: 20px
-                    height: 20px
-                    background: url(../img/header/profile_black.svg) center center no-repeat
-                    
+            .navbar-icons__profile
+                >a
+                    .navbar-icons_item
+                        margin: 0
+                        margin-bottom: 3px
+                        width: 20px
+                        height: 20px
+                        background: url(../img/header/profile_black.svg) center center no-repeat
+                .dropdown-menu
+                    width: 122px
+                    height: 116px
+                    top: -130px
+                    left: -62px
+            .descr-mobile
+                display: block
+                font-style: normal
+                font-weight: 600
+                font-size: 10px
+                line-height: 14px
+                color: #333333
             &-search
                 display: block
             img
                 display: none
-            &__profile
-                .descr
-                    display: none
         .navbar-collapse
             width: 100%
             top: 73px
+            .active
+                padding-top: 2px!important
+            .navbar-nav
+                .dropdown-menu
+                    position: static
+        .show .navbar-nav
+            padding-top: 18px
+        .show .navbar-nav .nav-item
+            padding-bottom: 22px
         .dropdown
-            
-            &::after
-                transform: rotate(90deg)            
+            padding-bottom: 21px          
     .main-slider
         margin-top: 13px
     .discounts, .popular
@@ -1827,9 +1917,92 @@ a
 
 // lsdkfjlksf{}
 @media (max-width: 400px)
+    .hide
+        display: none!important
     .header__logo
         width: 56px
     .header
+        .dropdown-menu
+            border: none
+            &::after
+                content: none
+            .dropdown-item
+                padding-left: 8px
+                .item-catalog-wrap
+                    img
+                        margin-right: 10px
+
+            .back
+                margin-bottom: 6px
+                border-bottom: 0
+                .item-catalog-wrap
+                    display: flex
+                    align-items: center
+                    img
+                        margin-right: 10px
+                    .circle
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        height: 28px
+                        width: 28px
+                        border-radius: 50%
+                        background-color: #0655A0
+                        margin-right: 13px
+                    img
+                        margin-right: 0
+                        transform: rotate(-270deg)
+                        width: 14px
+                        height: 7px
+                        margin-right: 3px
+                    span
+                        font-weight: 600
+                        font-size: 14px
+                        line-height: 19px
+                        color: #000000
+        .dropdown-catalog
+
+            li
+                padding-right: 5px
+                &:nth-child(2)
+                    
+                    border-top: 1px solid #D9D9D9
+        .subcategories
+            .back-sub
+                margin-bottom: 6px
+                border-bottom: 0
+                display: flex
+                align-items: center
+                .item-catalog-wrap
+
+                img
+                    margin-right: 10px
+                .circle
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    height: 28px
+                    width: 28px
+                    border-radius: 50%
+                    background-color: #0655A0
+                    margin-right: 13px
+                img
+                    margin-right: 0
+                    transform: rotate(-270deg)
+                    width: 14px
+                    height: 7px
+                    margin-right: 3px
+                span
+                    font-weight: 600
+                    font-size: 14px
+                    line-height: 19px
+                    color: #000000
+            .title-dropdown
+                display: none
+            .wrap
+                height: auto
+
+
         &__wrap 
             input
                 height: 36px
@@ -1852,22 +2025,22 @@ a
             font-size: 20px
             line-height: 23px
         nav
-            width: 163px
-            .active
-                &::after
-                    content: none
-                    padding-left: 0
-                    padding-right: 0
-                    margin-left: 0
-                    margin-right: 0
-            .nav-link
-                padding-left: 0
-                padding-right: 0
-                margin-left: 0
-                margin-right: 0
-                border-bottom: none
-                font-size: 14px
-                line-height: 16px
+            // width: 163px
+            // .active
+            //     &::after
+            //         content: none
+            //         padding-left: 0
+            //         padding-right: 0
+            //         margin-left: 0
+            //         margin-right: 0
+            // .nav-link
+            //     padding-left: 0
+            //     padding-right: 0
+            //     margin-left: 0
+            //     margin-right: 0
+            //     border-bottom: none
+            //     font-size: 14px
+            //     line-height: 16px
     .choise
         height: 157px
         padding-top: 24px
@@ -2022,15 +2195,30 @@ a
         .footer-webstripe
             margin-top: 10px
             padding-top: 12px
+            padding-bottom: 12px
             .wrap
+                padding-bottom: 23px
                 .payment
                     &-text
                         font-size: 12px
                         line-height: 16px
-                    .img-wrap      
-                            img
-                                &:nth-child(1)
-                                    height: 16px
-                                &:nth-child(2)
-                                &:nth-child(3)
-                            
+                        padding-bottom: 11px
+                    .img-wrap 
+                        width: 220px
+                        justify-content: space-between     
+                        img
+                            &:nth-child(1)
+                                margin-right: 0
+                                height: 18px
+                            &:nth-child(2)
+                                height: 19px
+                                margin-right: 0
+                            &:nth-child(3)
+                                height: 18px
+            .webstripe_logo
+                margin-top: 6px
+                margin-bottom: 0
+                img 
+                    width: 79px
+                    margin-top: 0
+
