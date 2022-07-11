@@ -133,7 +133,13 @@ $(document).ready(function () {
 		// toggler.classList.toggle('hide');
 	})
 ////mobileDropdown
+console.log(document.documentElement.clientWidth)
   if (document.documentElement.clientWidth < 1200) {
+	navBurger.addEventListener('click', () => {
+		// document.body.style.overflow = 'hidden';
+		// navbar.style.overflow = 'scroll'
+	})
+	//
     const navItem = document.querySelectorAll(".nav-item")
     let navbarNav = document.querySelector(".navbar-nav")
     navItem.forEach((item) => {

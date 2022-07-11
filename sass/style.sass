@@ -1446,6 +1446,122 @@ a
 
 
 @media (max-width: 1200px)
+
+    //
+    .hide
+        display: none!important
+    .header__logo
+        width: 56px
+    .header
+        .dropdown-menu
+            border: none
+            .back
+                margin-top: 3px
+                margin-bottom: 12px!important
+            li
+                a
+                    padding-bottom: 0
+            &::after
+                content: none
+            .dropdown-item
+                padding-left: 8px
+                .item-catalog-wrap
+                    img
+                        margin-right: 10px
+
+            .back
+                margin-bottom: 6px
+                border-bottom: 0
+                .item-catalog-wrap
+                    display: flex
+                    align-items: center
+                    img
+                        margin-right: 10px
+                    .circle
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        height: 28px
+                        width: 28px
+                        border-radius: 50%
+                        background-color: #0655A0
+                        margin-right: 13px
+                    img
+                        margin-right: 0
+                        transform: rotate(-270deg)
+                        width: 14px
+                        height: 7px
+                        margin-right: 3px
+                    span
+                        font-weight: 600
+                        font-size: 14px
+                        line-height: 19px
+                        color: #000000
+        .dropdown-catalog
+
+            li
+                padding-right: 5px
+                &:nth-child(2)
+                    
+                    border-top: 1px solid #D9D9D9
+        .subcategories
+            height: auto
+            &-item
+                padding-bottom: 1px!important
+                padding-left: 8px!important
+            .back-sub
+                margin-top: 1px
+                padding-left: 8px
+                margin-bottom: 16px
+                border-bottom: 0
+                display: flex
+                align-items: center
+                .item-catalog-wrap
+
+                img
+                    margin-right: 10px
+                .circle
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    height: 28px
+                    width: 28px
+                    border-radius: 50%
+                    background-color: #0655A0
+                    margin-right: 13px
+                img
+                    margin-right: 0
+                    transform: rotate(-270deg)
+                    width: 14px
+                    height: 7px
+                    margin-right: 3px
+                span
+                    font-weight: 600
+                    font-size: 14px
+                    line-height: 19px
+                    color: #000000
+            .title-dropdown
+                display: none
+            .wrap
+                height: auto
+        .navbar-collapse
+            width: 100%
+            top: 73px
+            z-index: 2
+            .active
+                padding-top: 2px!important
+            .navbar-nav
+                .dropdown-menu
+                    position: static
+        .show .navbar-nav
+            padding-top: 18px
+        .show .navbar-nav .nav-item
+            padding-bottom: 22px
+        .dropdown
+            padding-bottom: 21px  
+                
+
+    ///////
     .navbar-expand-lg 
         display: block
 
@@ -1467,7 +1583,7 @@ a
                 top: 100%
                 left: 0
                 display: none!important
-                width: 30%
+                width: 100%
             &-icons__profile
                 .show
                     display: flex!important
@@ -1865,6 +1981,7 @@ a
         .navbar-collapse
             width: 100%
             top: 73px
+            z-index: 2
             .active
                 padding-top: 2px!important
             .navbar-nav
@@ -1915,7 +2032,6 @@ a
                 flex-direction: column
                 align-items: center!important
 
-// lsdkfjlksf{}
 @media (max-width: 400px)
     .hide
         display: none!important
@@ -1924,6 +2040,12 @@ a
     .header
         .dropdown-menu
             border: none
+            .back
+                margin-top: 3px
+                margin-bottom: 12px!important
+            li
+                a
+                    padding-bottom: 0
             &::after
                 content: none
             .dropdown-item
@@ -1968,8 +2090,14 @@ a
                     
                     border-top: 1px solid #D9D9D9
         .subcategories
+            height: auto
+            &-item
+                padding-bottom: 1px!important
+                padding-left: 8px!important
             .back-sub
-                margin-bottom: 6px
+                margin-top: 1px
+                padding-left: 8px
+                margin-bottom: 16px
                 border-bottom: 0
                 display: flex
                 align-items: center
