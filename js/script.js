@@ -133,7 +133,6 @@ $(document).ready(function () {
 		// toggler.classList.toggle('hide');
 	})
 ////mobileDropdown
-console.log(document.documentElement.clientWidth)
   if (document.documentElement.clientWidth < 1200) {
 	navBurger.addEventListener('click', () => {
 		// document.body.style.overflow = 'hidden';
@@ -162,7 +161,7 @@ console.log(document.documentElement.clientWidth)
         })
   
   
-        let catalogItem = document.querySelectorAll('.dropdown-catalog li')
+        let catalogItem = document.querySelectorAll('.dropdown-catalog .dropend')
         catalogItem.forEach(item => {
           item.addEventListener('click', () => {
             let catalogDrop = item.childNodes[3].cloneNode(true)
@@ -173,9 +172,7 @@ console.log(document.documentElement.clientWidth)
   
             back.classList.add('hide')
   
-            console.log(catalogDrop)
             let backSub = catalogDrop.querySelector(".back-sub")
-            console.log(backSub)
             backSub.addEventListener("click", (e) => {
               e.preventDefault()
               catalogItem.forEach((item) => {
@@ -224,11 +221,13 @@ console.log(document.documentElement.clientWidth)
 
   ////callback
 
-  const callLink = document.querySelector('.header__phone-descr .call-back')
-  callLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    show(document.querySelector('.modal-callback'))
-
+  const callLink = document.querySelectorAll('.call-back')
+  callLink.forEach(item => {
+	item.addEventListener('click', (e) => {
+		e.preventDefault();
+		show(document.querySelector('.modal-callback'))
+	
+	  })
   })
 
   function show (el) {

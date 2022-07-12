@@ -228,7 +228,9 @@ a
             height: 42px
             width: 42px
             border-radius: 50%
+
             background: #F5F5F5 url(../img/header/time.svg) center center no-repeat
+
         &-descr
             font-weight: 600
             font-size: 16px
@@ -243,7 +245,9 @@ a
             height: 42px
             width: 42px
             border-radius: 50%
+            
             background: #F5F5F5 url(../img/header/phone.svg) center center no-repeat
+
         &-descr
             span
                 &:nth-last-child(1)
@@ -423,6 +427,7 @@ a
             img
                 margin-right: 14px
         .dropend
+
             .show
                 &::after
                     transform: rotate(180deg)
@@ -442,6 +447,9 @@ a
                 left: 103%
 
             .dropdown-toggle
+                &:hover
+                    background: #0655A0
+                    color: #FFF
 
                 &::after
                     width: 8px
@@ -807,7 +815,7 @@ a
 
         color: #FFFFFF
         margin-bottom: 12px
-    p
+    h2
         font-weight: 700
         font-size: 20px
         line-height: 27px
@@ -1567,6 +1575,8 @@ a
 
 @media (max-width: 1200px)
     .header
+        .header__wrap
+            margin-top: 20px
         .navbar-icons__profile
             .nav-link
                 display: flex
@@ -1676,8 +1686,10 @@ a
             margin-right: 0
             &-icon
                 margin-right: 10px
-                width: 31px
-                height: 31px
+                width: 20px
+                height: 20px
+                border-radius: 0
+                background-size: contain
             &-descr
                 font-size: 14px
                 line-height: 19px
@@ -1685,20 +1697,26 @@ a
             display: flex
             align-items: center
             margin-right: 20px
+
             &-icon
                 margin-right: 10px
-                width: 31px
-                height: 31px
+                width: 20px
+                height: 20px
+                border-radius: 0
+                background-size: contain
             &-descr
                 font-size: 14px
                 line-height: 24px
         &__phone
             display: flex
             align-items: center
+
             &-icon
                 margin-right: 10px
-                width: 31px
-                height: 31px
+                width: 20px
+                height: 20px
+                border-radius: 0
+                background-size: contain
             &-descr
                 span
                     &:nth-last-child(1)
@@ -1840,6 +1858,29 @@ a
     .discounts, .popular
         padding-right: 0
         padding-left: 0
+        padding-top: 43px
+        h2 
+             padding-left: 7px
+             margin-bottom: 15px
+        .scroll
+            margin-bottom: 9px
+        nav
+            padding-left: 0!important
+            a
+                margin-left: 0!important
+                margin-right: 0!important
+                padding-left: 18px!important
+                padding-right: 0px!important
+                margin-bottom: 12px
+    .popular
+        padding-top: 37px
+        padding-bottom: 35px
+        h2
+            margin-bottom: 18px
+        .scroll
+            margin-bottom: 20px
+            height: 130px
+
     .promo
         .toggler-text
             display: inline
@@ -1875,7 +1916,7 @@ a
             padding-left: 20px
             padding-right: 20px
         &__wrap
-            margin-top: 14px
+            margin-top: 14px!important
             display: block
             width: 100%
             form
@@ -1899,7 +1940,7 @@ a
             padding-left: 35px
             padding-right: 20px
             display: flex
-            justify-content: flex-start
+            justify-content: space-between
             height: 60px
             position: fixed
             left: 0
@@ -1964,8 +2005,8 @@ a
                         background: url(../img/header/profile_black.svg) center center no-repeat
                 .dropdown-menu
                     width: 122px
-                    height: 116px
-                    top: -130px
+                    height: 76px
+                    top: -92px
                     left: -62px
             .descr-mobile
                 display: block
@@ -2005,6 +2046,23 @@ a
         .btn-wrap
             display: flex
             justify-content: space-between
+
+
+
+    .modal
+        &-content
+            padding: 60px 20px 60px 20px
+        h5
+            font-weight: 700
+            font-size: 20px
+            line-height: 30px
+            letter-spacing: -0.6px
+            color: #000000
+        .form-control
+            width: 100%
+        form
+            .btn
+                width: 100%
 
 
 @media (max-width: 500px)
@@ -2153,22 +2211,6 @@ a
             font-size: 20px
             line-height: 23px
         nav
-            // width: 163px
-            // .active
-            //     &::after
-            //         content: none
-            //         padding-left: 0
-            //         padding-right: 0
-            //         margin-left: 0
-            //         margin-right: 0
-            // .nav-link
-            //     padding-left: 0
-            //     padding-right: 0
-            //     margin-left: 0
-            //     margin-right: 0
-            //     border-bottom: none
-            //     font-size: 14px
-            //     line-height: 16px
     .choise
         height: 157px
         padding-top: 24px
@@ -2350,3 +2392,23 @@ a
                     width: 79px
                     margin-top: 0
 
+@media (max-width: 360px)
+
+
+    .footer
+        .input-check_wrap
+            width: 100%
+@media (max-width: 350px)
+    .header
+        .navbar-icons
+            justify-content: space-evenly
+            padding-left: 0
+            padding-right: 0
+            a
+                margin-right: 0!important
+    .cards, .promo
+        .cards__item
+            height: 120px
+    .choise
+        &__btn
+            width: 100%
